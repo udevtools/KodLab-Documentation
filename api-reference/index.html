@@ -1,0 +1,1730 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../architecture/">
+      
+      
+        <link rel="next" href="../exemples/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Référence API - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-de-reference-kodlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Référence API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../langage-kod/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-jeux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exemples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langage-kod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-jeux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-graphique" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Graphique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Graphique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-lecran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion de l'Écran
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion de l&#39;Écran">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clearscreencolor" class="md-nav__link">
+    <span class="md-ellipsis">
+      clearScreen(color)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formes-geometriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formes Géométriques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formes Géométriques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawrectx-y-width-height-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawRect(x, y, width, height, color)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawcirclex-y-radius-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawCircle(x, y, radius, color)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawlinex1-y1-x2-y2-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawLine(x1, y1, x2, y2, color)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drawpixelx-y-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawPixel(x, y, color)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texte-et-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texte et Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Texte et Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drawtexttext-x-y-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      drawText(text, x, y, color)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Audio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-sons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Sons
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Sons">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playsoundnote-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      playSound(note, duration)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-dentrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      API d'Entrées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API d&#39;Entrées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-du-clavier" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion du Clavier
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion du Clavier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iskeypressedkeyname" class="md-nav__link">
+    <span class="md-ellipsis">
+      isKeyPressed(keyName)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-de-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions de Jeu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions de Jeu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-obligatoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions Obligatoires
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions Obligatoires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#function-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      function start()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      function update()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-personnalisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions Personnalisées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utilitaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilitaires
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utilitaires">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#calculs-mathematiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculs Mathématiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-mathematiques-simulees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions Mathématiques Simulées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constantes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dimensions-de-lecran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dimensions de l'Écran
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couleurs-predefinies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couleurs Prédéfinies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-dusage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples d&#39;Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-utilisateur-complete" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface Utilisateur Complète
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-particules-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Système de Particules Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#detection-de-collision-avancee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détection de Collision Avancée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-et-tweening" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation et Tweening
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#machine-a-etats-de-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine à États de Jeu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-de-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Conseils de Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Conseils de Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimisation-du-rendu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisation du Rendu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitation-des-calculs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitation des Calculs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-objets-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Objets Multiples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-de-reference-kodlab">📚 API de Référence - KodLab</h1>
+<p>Documentation complète de toutes les fonctions disponibles dans le langage Kod.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#api-graphique">API Graphique</a></li>
+<li><a href="#api-dentrées">API d'Entrées</a></li>
+<li><a href="#fonctions-de-jeu">Fonctions de Jeu</a></li>
+<li><a href="#utilitaires">Utilitaires</a></li>
+<li><a href="#constantes">Constantes</a></li>
+<li><a href="#exemples-dusage">Exemples d'Usage</a></li>
+</ol>
+<hr />
+<h2 id="api-graphique">API Graphique</h2>
+<h3 id="gestion-de-lecran">Gestion de l'Écran</h3>
+<h4 id="clearscreencolor"><code>clearScreen(color)</code></h4>
+<p>Efface tout l'écran avec la couleur spécifiée.</p>
+<p><strong>Paramètres:</strong>
+- <code>color</code> (string) : Couleur au format hexadécimal ou nom</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">clearScreen(&quot;#000000&quot;)    // Noir
+clearScreen(&quot;#FFFFFF&quot;)    // Blanc
+clearScreen(&quot;#001122&quot;)    // Bleu foncé
+clearScreen(&quot;red&quot;)        // Rouge (noms limités)
+</code></pre>
+<p><strong>Notes:</strong>
+- À appeler <strong>une seule fois</strong> par frame, au début de <code>update()</code>
+- Obligatoire pour éviter les trainées d'affichage
+- Performance optimisée pour les couleurs hexadécimales</p>
+<hr />
+<h3 id="formes-geometriques">Formes Géométriques</h3>
+<h4 id="drawrectx-y-width-height-color"><code>drawRect(x, y, width, height, color)</code></h4>
+<p>Dessine un rectangle plein.</p>
+<p><strong>Paramètres:</strong>
+- <code>x</code> (number) : Position X du coin supérieur gauche
+- <code>y</code> (number) : Position Y du coin supérieur gauche<br />
+- <code>width</code> (number) : Largeur du rectangle
+- <code>height</code> (number) : Hauteur du rectangle
+- <code>color</code> (string) : Couleur de remplissage</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">drawRect(100, 50, 80, 40, &quot;#FF0000&quot;)     // Rectangle rouge
+drawRect(0, 0, 400, 20, &quot;#333333&quot;)       // Barre supérieure
+drawRect(playerX, playerY, 20, 20, &quot;#00FF00&quot;)  // Joueur carré
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Plateformes et obstacles
+- Interface utilisateur (barres, boutons)
+- Joueurs et ennemis rectangulaires</p>
+<hr />
+<h4 id="drawcirclex-y-radius-color"><code>drawCircle(x, y, radius, color)</code></h4>
+<p>Dessine un cercle plein.</p>
+<p><strong>Paramètres:</strong>
+- <code>x</code> (number) : Position X du centre
+- <code>y</code> (number) : Position Y du centre
+- <code>radius</code> (number) : Rayon du cercle
+- <code>color</code> (string) : Couleur de remplissage</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">drawCircle(200, 150, 25, &quot;#FFFF00&quot;)      // Cercle jaune centré
+drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)  // Balle
+drawCircle(mouseX, mouseY, 5, &quot;#FF0000&quot;)         // Curseur
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Balles et projectiles
+- Joueurs circulaires
+- Particules et effets
+- Zones de collision visibles</p>
+<hr />
+<h4 id="drawlinex1-y1-x2-y2-color"><code>drawLine(x1, y1, x2, y2, color)</code></h4>
+<p>Dessine une ligne droite.</p>
+<p><strong>Paramètres:</strong>
+- <code>x1</code> (number) : Position X du point de départ
+- <code>y1</code> (number) : Position Y du point de départ
+- <code>x2</code> (number) : Position X du point d'arrivée
+- <code>y2</code> (number) : Position Y du point d'arrivée
+- <code>color</code> (string) : Couleur de la ligne</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">drawLine(0, 150, 400, 150, &quot;#666666&quot;)    // Ligne horizontale
+drawLine(0, 0, 400, 300, &quot;#FFFFFF&quot;)      // Diagonale
+drawLine(playerX, playerY, targetX, targetY, &quot;#FF0000&quot;)  // Visée
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Trajectoires et visées
+- Grilles et repères
+- Connexions entre objets
+- Décoration et interface</p>
+<hr />
+<h4 id="drawpixelx-y-color"><code>drawPixel(x, y, color)</code></h4>
+<p>Dessine un pixel unique.</p>
+<p><strong>Paramètres:</strong>
+- <code>x</code> (number) : Position X du pixel
+- <code>y</code> (number) : Position Y du pixel
+- <code>color</code> (string) : Couleur du pixel</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">drawPixel(200, 150, &quot;#FFFFFF&quot;)           // Pixel blanc
+for i = 1 to 100
+    drawPixel(randomX, randomY, &quot;#FFFF00&quot;)  // Étoiles
+end
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Effets de particules
+- Étoiles et points lumineux
+- Pixel art détaillé
+- Debuggage de positions</p>
+<p><strong>Notes:</strong>
+- Performance modérée : éviter les milliers de pixels par frame
+- Idéal pour les détails fins</p>
+<hr />
+<h3 id="texte-et-interface">Texte et Interface</h3>
+<h4 id="drawtexttext-x-y-color"><code>drawText(text, x, y, color)</code></h4>
+<p>Affiche du texte à l'écran.</p>
+<p><strong>Paramètres:</strong>
+- <code>text</code> (string) : Texte à afficher (peut inclure des variables)
+- <code>x</code> (number) : Position X du texte (coin gauche)
+- <code>y</code> (number) : Position Y du texte (baseline)
+- <code>color</code> (string) : Couleur du texte</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">drawText(&quot;Score: 1250&quot;, 10, 20, &quot;#FFFFFF&quot;)
+drawText(&quot;GAME OVER&quot;, 150, 150, &quot;#FF0000&quot;)
+drawText(&quot;Niveau &quot; + currentLevel, 10, 40, &quot;#FFFF00&quot;)
+drawText(&quot;Vies: &quot; + lives, 10, 60, &quot;#00FF00&quot;)
+drawText(&quot;Temps: &quot; + timeRemaining, 300, 20, &quot;#CYAN&quot;)
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Interface utilisateur (score, vies, temps)
+- Messages de jeu (game over, level up)
+- Debug et informations développeur
+- Dialogues et instructions</p>
+<p><strong>Notes:</strong>
+- Police fixe : Arial 16px
+- Pas de retour à la ligne automatique
+- Concaténation avec <code>+</code> pour les variables</p>
+<hr />
+<h2 id="api-audio">API Audio</h2>
+<h3 id="gestion-des-sons">Gestion des Sons</h3>
+<h4 id="playsoundnote-duration"><code>playSound(note, duration)</code></h4>
+<p>Joue une note musicale avec l'oscillateur intégré.</p>
+<p><strong>Paramètres:</strong>
+- <code>note</code> (string) : Nom de la note à jouer<br />
+- <code>duration</code> (number, optionnel) : Durée en secondes (défaut: 0.2)</p>
+<p><strong>Notes disponibles:</strong>
+- <code>"do"</code> : Do (C4 - 261.63 Hz)
+- <code>"re"</code> : Ré (D4 - 293.66 Hz) 
+- <code>"mi"</code> : Mi (E4 - 329.63 Hz)
+- <code>"fa"</code> : Fa (F4 - 349.23 Hz)
+- <code>"sol"</code> : Sol (G4 - 392.00 Hz)
+- <code>"la"</code> : La (A4 - 440.00 Hz)
+- <code>"si"</code> : Si (B4 - 493.88 Hz)
+- <code>"do2"</code> : Do aigu (C5 - 523.25 Hz)</p>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">playSound(&quot;do&quot;)              // Note do, durée par défaut (0.2s)
+playSound(&quot;mi&quot;, 0.5)         // Note mi pendant 0.5 secondes
+playSound(&quot;sol&quot;, 0.1)        // Note sol courte pour effet
+
+// Effets sonores de jeu
+if isKeyPressed(&quot;space&quot;)
+    playSound(&quot;do&quot;, 0.1)     // Son de tir
+end
+
+if collision
+    playSound(&quot;si&quot;, 0.2)     // Son d'alerte
+end
+
+// Mélodie simple
+playSound(&quot;do&quot;, 0.3)
+playSound(&quot;re&quot;, 0.3)
+playSound(&quot;mi&quot;, 0.3)
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Effets sonores d'actions (saut, tir, collision)
+- Feedback audio pour l'interface
+- Mélodies et musiques simples
+- Sons d'ambiance et notifications</p>
+<p><strong>Notes techniques:</strong>
+- Sons générés par Web Audio API (oscillateur square wave)
+- Volume avec fade-out automatique pour éviter les clics
+- Nécessite une interaction utilisateur pour initialiser l'audio
+- Compatible avec tous les navigateurs modernes</p>
+<hr />
+<h2 id="api-dentrees">API d'Entrées</h2>
+<h3 id="gestion-du-clavier">Gestion du Clavier</h3>
+<h4 id="iskeypressedkeyname"><code>isKeyPressed(keyName)</code></h4>
+<p>Vérifie si une touche est actuellement pressée.</p>
+<p><strong>Paramètres:</strong>
+- <code>keyName</code> (string) : Nom de la touche à vérifier</p>
+<p><strong>Valeur de retour:</strong>
+- <code>boolean</code> : <code>true</code> si pressée, <code>false</code> sinon</p>
+<p><strong>Touches supportées:</strong></p>
+<pre><code class="language-kod">// Flèches directionnelles (et équivalents WASD)
+isKeyPressed(&quot;up&quot;)        // ↑ ou W
+isKeyPressed(&quot;down&quot;)      // ↓ ou S
+isKeyPressed(&quot;left&quot;)      // ← ou A
+isKeyPressed(&quot;right&quot;)     // → ou D
+
+// Espace
+isKeyPressed(&quot;space&quot;)     // Barre d'espace
+</code></pre>
+<p><strong>Exemples:</strong></p>
+<pre><code class="language-kod">// Mouvement basique
+if isKeyPressed(&quot;left&quot;)
+    playerX = playerX - speed
+end
+if isKeyPressed(&quot;right&quot;)
+    playerX = playerX + speed
+end
+
+// Actions
+if isKeyPressed(&quot;space&quot;)
+    shoot()
+end
+
+// Contrôles combinés
+if isKeyPressed(&quot;up&quot;) &amp;&amp; isKeyPressed(&quot;space&quot;)
+    jumpAndShoot()
+end
+</code></pre>
+<p><strong>Notes:</strong>
+- Détection en temps réel (pas d'événements)
+- Touches maintenues détectées chaque frame
+- Majuscules/minuscules importantes : <code>"space"</code> pas <code>"Space"</code></p>
+<hr />
+<h2 id="fonctions-de-jeu">Fonctions de Jeu</h2>
+<h3 id="fonctions-obligatoires">Fonctions Obligatoires</h3>
+<h4 id="function-start"><code>function start()</code></h4>
+<p>Fonction d'initialisation appelée <strong>une seule fois</strong> au démarrage du jeu.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-kod">function start()
+    // Initialisation des variables
+    playerX = 200
+    playerY = 150
+    score = 0
+
+    // Configuration initiale
+    clearScreen(&quot;#000033&quot;)
+
+    // Messages de démarrage
+    drawText(&quot;Jeu initialisé!&quot;, 100, 100, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<p><strong>Cas d'Usage:</strong>
+- Initialisation des variables de jeu
+- Positionnement initial des objets
+- Écran de démarrage
+- Configuration des paramètres</p>
+<hr />
+<h4 id="function-update"><code>function update()</code></h4>
+<p>Boucle principale appelée <strong>60 fois par seconde</strong>.</p>
+<p><strong>Usage:</strong></p>
+<pre><code class="language-kod">function update()
+    // 1. Effacer l'écran
+    clearScreen(&quot;#000033&quot;)
+
+    // 2. Traiter les entrées
+    handleInput()
+
+    // 3. Mettre à jour la logique
+    updatePlayer()
+    updateEnemies()
+
+    // 4. Vérifier les collisions
+    checkCollisions()
+
+    // 5. Afficher les éléments
+    drawGame()
+
+    // 6. Interface utilisateur
+    drawUI()
+end
+</code></pre>
+<p><strong>Structure recommandée:</strong>
+1. <strong>Effacement</strong> : <code>clearScreen()</code>
+2. <strong>Entrées</strong> : <code>isKeyPressed()</code>
+3. <strong>Logique</strong> : Calculs et mises à jour
+4. <strong>Collisions</strong> : Détections d'interaction
+5. <strong>Rendu</strong> : Tous les <code>draw...()</code>
+6. <strong>Interface</strong> : Score, vie, messages</p>
+<hr />
+<h3 id="fonctions-personnalisees">Fonctions Personnalisées</h3>
+<p>Vous pouvez créer vos propres fonctions pour organiser votre code :</p>
+<pre><code class="language-kod">function updatePlayer()
+    // Mouvement
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - playerSpeed
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + playerSpeed
+    end
+
+    // Limites
+    if playerX &lt; 0
+        playerX = 0
+    end
+    if playerX &gt; 380
+        playerX = 380
+    end
+end
+
+function drawPlayer()
+    drawRect(playerX, playerY, 20, 20, &quot;#00FF00&quot;)
+
+    if hasShield
+        drawCircle(playerX + 10, playerY + 10, 25, &quot;#0066FF&quot;)
+    end
+end
+
+function resetGame()
+    playerX = 200
+    playerY = 150
+    score = 0
+    gameOver = false
+end
+</code></pre>
+<p><strong>Limitations importantes:</strong>
+- <strong>Pas de paramètres</strong> : <code>function maFonction(param)</code> ❌
+- <strong>Pas de valeur de retour</strong> : <code>return value</code> ❌<br />
+- <strong>Accès variables globales</strong> : Toutes les variables sont partagées</p>
+<hr />
+<h2 id="utilitaires">Utilitaires</h2>
+<h3 id="calculs-mathematiques">Calculs Mathématiques</h3>
+<p>Opérateurs disponibles :</p>
+<pre><code class="language-kod">// Arithmétique
+let somme = a + b
+let difference = a - b
+let produit = a * b
+let quotient = a / b
+let modulo = a % b      // Reste de la division
+
+// Comparaisons
+a == b    // Égalité
+a != b    // Différence
+a &lt; b     // Inférieur
+a &gt; b     // Supérieur
+a &lt;= b    // Inférieur ou égal
+a &gt;= b    // Supérieur ou égal
+
+// Logique
+a &amp;&amp; b    // ET logique
+a || b    // OU logique
+!a        // NON logique
+</code></pre>
+<h3 id="fonctions-mathematiques-simulees">Fonctions Mathématiques Simulées</h3>
+<pre><code class="language-kod">// Distance entre deux points (approximation)
+let dx = x1 - x2
+let dy = y1 - y2
+let distance = (dx * dx) + (dy * dy)  // Distance au carré
+
+// Valeur absolue
+let abs = value &lt; 0 ? -value : value
+
+// Min/Max
+let min = a &lt; b ? a : b
+let max = a &gt; b ? a : b
+
+// &quot;Aléatoire&quot; simple (pseudo-aléatoire)
+let random = ((frameCount * 7) + (playerX * 3)) % 100
+</code></pre>
+<hr />
+<h2 id="constantes">Constantes</h2>
+<h3 id="dimensions-de-lecran">Dimensions de l'Écran</h3>
+<pre><code class="language-kod">// Taille du canvas
+let SCREEN_WIDTH = 400
+let SCREEN_HEIGHT = 300
+
+// Limites utiles
+let MAX_X = 380  // 400 - largeur objet (20)
+let MAX_Y = 280  // 300 - hauteur objet (20)
+</code></pre>
+<h3 id="couleurs-predefinies">Couleurs Prédéfinies</h3>
+<pre><code class="language-kod">// Couleurs courantes (format hexadécimal recommandé)
+let BLACK = &quot;#000000&quot;
+let WHITE = &quot;#FFFFFF&quot;
+let RED = &quot;#FF0000&quot;
+let GREEN = &quot;#00FF00&quot;
+let BLUE = &quot;#0000FF&quot;
+let YELLOW = &quot;#FFFF00&quot;
+let CYAN = &quot;#00FFFF&quot;
+let MAGENTA = &quot;#FF00FF&quot;
+
+// Couleurs de jeu typiques
+let BACKGROUND = &quot;#000033&quot;
+let PLAYER = &quot;#00FF00&quot;
+let ENEMY = &quot;#FF0000&quot;
+let UI_TEXT = &quot;#FFFFFF&quot;
+let WARNING = &quot;#FFFF00&quot;
+</code></pre>
+<hr />
+<h2 id="exemples-dusage">Exemples d'Usage</h2>
+<h3 id="interface-utilisateur-complete">Interface Utilisateur Complète</h3>
+<pre><code class="language-kod">let score = 0
+let lives = 3
+let level = 1
+let time = 300
+
+function drawUI()
+    // Score en haut à gauche
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+
+    // Vies avec symboles
+    drawText(&quot;Vies:&quot;, 10, 40, &quot;#FFFFFF&quot;)
+    for i = 1 to lives
+        drawCircle(60 + (i * 15), 35, 5, &quot;#FF0000&quot;)
+    end
+
+    // Niveau en haut à droite
+    drawText(&quot;Niveau &quot; + level, 320, 20, &quot;#FFFF00&quot;)
+
+    // Temps restant
+    let minutes = time / 60
+    let seconds = time % 60
+    drawText(&quot;Temps: &quot; + minutes + &quot;:&quot; + seconds, 300, 40, &quot;#00FFFF&quot;)
+
+    // Barre de santé
+    drawRect(10, 270, 100, 10, &quot;#660000&quot;)  // Fond
+    drawRect(10, 270, playerHealth, 10, &quot;#00FF00&quot;)  // Santé
+    drawText(&quot;Santé&quot;, 120, 280, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="systeme-de-particules-simple">Système de Particules Simple</h3>
+<pre><code class="language-kod">let particle1X = 0
+let particle1Y = 0
+let particle1Life = 0
+
+let particle2X = 0
+let particle2Y = 0
+let particle2Life = 0
+
+function createExplosion(x, y)
+    particle1X = x
+    particle1Y = y
+    particle1Life = 30
+
+    particle2X = x + 10
+    particle2Y = y - 5
+    particle2Life = 25
+end
+
+function updateParticles()
+    if particle1Life &gt; 0
+        particle1Life = particle1Life - 1
+        particle1Y = particle1Y - 2
+    end
+
+    if particle2Life &gt; 0
+        particle2Life = particle2Life - 1
+        particle2Y = particle2Y - 1
+        particle2X = particle2X + 1
+    end
+end
+
+function drawParticles()
+    if particle1Life &gt; 0
+        let alpha = particle1Life / 30
+        if alpha &gt; 0.5
+            drawCircle(particle1X, particle1Y, 3, &quot;#FFFF00&quot;)
+        else
+            drawCircle(particle1X, particle1Y, 2, &quot;#FF6600&quot;)
+        end
+    end
+
+    if particle2Life &gt; 0
+        drawCircle(particle2X, particle2Y, 2, &quot;#FF0000&quot;)
+    end
+end
+</code></pre>
+<h3 id="detection-de-collision-avancee">Détection de Collision Avancée</h3>
+<pre><code class="language-kod">function checkRectCollision(x1, y1, w1, h1, x2, y2, w2, h2)
+    // Collision AABB (Axis-Aligned Bounding Box)
+    let collisionX = (x1 &lt; x2 + w2) &amp;&amp; (x1 + w1 &gt; x2)
+    let collisionY = (y1 &lt; y2 + h2) &amp;&amp; (y1 + h1 &gt; y2)
+
+    if collisionX &amp;&amp; collisionY
+        // Collision détectée
+        return true
+    end
+    return false
+end
+
+function checkCircleCollision(x1, y1, r1, x2, y2, r2)
+    let dx = x1 - x2
+    let dy = y1 - y2
+    let distance = (dx * dx) + (dy * dy)
+    let radiusSum = (r1 + r2) * (r1 + r2)
+
+    if distance &lt; radiusSum
+        return true
+    end
+    return false
+end
+
+function checkPointInRect(px, py, rx, ry, rw, rh)
+    if (px &gt;= rx) &amp;&amp; (px &lt;= rx + rw) &amp;&amp; (py &gt;= ry) &amp;&amp; (py &lt;= ry + rh)
+        return true
+    end
+    return false
+end
+</code></pre>
+<h3 id="animation-et-tweening">Animation et Tweening</h3>
+<pre><code class="language-kod">let animTime = 0
+let bounceHeight = 0
+
+function updateAnimation()
+    animTime = animTime + 1
+    if animTime &gt; 120
+        animTime = 0
+    end
+
+    // Rebond sinusoïdal simplifié
+    let phase = animTime / 60  // 0 à 2
+    if phase &lt; 1
+        bounceHeight = phase * 50  // Monte
+    else
+        bounceHeight = (2 - phase) * 50  // Descend
+    end
+end
+
+function drawAnimatedPlayer()
+    let finalY = playerY - bounceHeight
+    drawCircle(playerX, finalY, 15, &quot;#00FF00&quot;)
+
+    // Ombre au sol
+    let shadowSize = 15 - (bounceHeight / 5)
+    drawCircle(playerX, playerY + 20, shadowSize, &quot;#333333&quot;)
+end
+</code></pre>
+<h3 id="machine-a-etats-de-jeu">Machine à États de Jeu</h3>
+<pre><code class="language-kod">let gameState = &quot;menu&quot;  // &quot;menu&quot;, &quot;playing&quot;, &quot;paused&quot;, &quot;gameover&quot;
+let stateTime = 0
+
+function update()
+    stateTime = stateTime + 1
+
+    if gameState == &quot;menu&quot;
+        updateMenu()
+    else if gameState == &quot;playing&quot;
+        updatePlaying()
+    else if gameState == &quot;paused&quot;
+        updatePaused()
+    else if gameState == &quot;gameover&quot;
+        updateGameOver()
+    end
+end
+
+function updateMenu()
+    clearScreen(&quot;#000033&quot;)
+
+    // Animation du titre
+    let titleY = 100 + (stateTime / 10) % 20 - 10
+    drawText(&quot;MON JEU GÉNIAL&quot;, 120, titleY, &quot;#FFFF00&quot;)
+
+    // Instructions clignotantes
+    if (stateTime / 30) % 2 &lt; 1
+        drawText(&quot;Appuyez sur ESPACE&quot;, 120, 180, &quot;#FFFFFF&quot;)
+    end
+
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;playing&quot;
+        stateTime = 0
+        initGame()
+    end
+end
+
+function updatePlaying()
+    // Logique de jeu normale
+    handleGameInput()
+    updateGameLogic()
+    drawGame()
+
+    // Pause
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;paused&quot;
+        stateTime = 0
+    end
+end
+
+function updatePaused()
+    // Redessiner le jeu en grisé/figé
+    drawGame()
+
+    // Overlay de pause
+    drawRect(100, 100, 200, 100, &quot;#000066&quot;)
+    drawText(&quot;PAUSE&quot;, 170, 140, &quot;#FFFFFF&quot;)
+    drawText(&quot;ESPACE pour continuer&quot;, 110, 160, &quot;#CCCCCC&quot;)
+
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;playing&quot;
+        stateTime = 0
+    end
+end
+</code></pre>
+<hr />
+<h2 id="conseils-de-performance">⚡ Conseils de Performance</h2>
+<h3 id="optimisation-du-rendu">Optimisation du Rendu</h3>
+<pre><code class="language-kod">// ✅ Bon : Un seul clearScreen par frame
+function update()
+    clearScreen(&quot;#000033&quot;)
+    drawAllObjects()
+    drawUI()
+end
+
+// ❌ Éviter : Multiples clearScreen
+function update()
+    clearScreen(&quot;#000033&quot;)
+    drawPlayer()
+    clearScreen(&quot;#000033&quot;)  // ❌ Inefficace
+    drawEnemies()
+end
+</code></pre>
+<h3 id="limitation-des-calculs">Limitation des Calculs</h3>
+<pre><code class="language-kod">// ✅ Calculer une fois, utiliser plusieurs fois
+let playerCenterX = playerX + 10
+let playerCenterY = playerY + 10
+
+drawCircle(playerCenterX, playerCenterY, 15, &quot;#00FF00&quot;)
+checkCollision(playerCenterX, playerCenterY)
+
+// ❌ Calculs répétitifs
+drawCircle(playerX + 10, playerY + 10, 15, &quot;#00FF00&quot;)
+checkCollision(playerX + 10, playerY + 10)  // Recalcule
+</code></pre>
+<h3 id="gestion-des-objets-multiples">Gestion des Objets Multiples</h3>
+<pre><code class="language-kod">// Technique pour simuler les tableaux sans support natif
+let enemy1X = 100
+let enemy1Y = 50
+let enemy1Active = true
+
+let enemy2X = 200
+let enemy2Y = 50
+let enemy2Active = true
+
+function updateAllEnemies()
+    if enemy1Active
+        updateEnemy1()
+    end
+    if enemy2Active
+        updateEnemy2()
+    end
+end
+</code></pre>
+<hr />
+<p>Cette API couvre toutes les fonctionnalités disponibles dans KodLab. Pour des exemples complets, consultez les <a href="../exemples/">Exemples de Jeux</a> !</p>
+<p><strong>🚀 Bon développement avec KodLab !</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

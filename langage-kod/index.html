@@ -1,0 +1,2525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../guide-utilisation/">
+      
+      
+        <link rel="next" href="../guide-jeux/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Langage Kod - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#langage-kod-documentation-complete" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Langage Kod
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-jeux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exemples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#philosophie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Philosophie
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Philosophie">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quest-ce-que-kod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Qu'est-ce que Kod ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilation-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilation Automatique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntaxe-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe de Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Syntaxe de Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-dun-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure d'un Programme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regles-syntaxiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Règles Syntaxiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Règles Syntaxiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-commentaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Commentaires
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-casse-et-nommage" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Casse et Nommage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-indentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Indentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-blocs-de-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Blocs de Code
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables-et-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variables et Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables et Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#declaration-de-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Déclaration de Variables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#types-supportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types Supportés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types Supportés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-nombres" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Nombres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Chaînes de Caractères
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-booleens" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Booléens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-sur-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérations sur Variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Opérations sur Variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arithmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmétiques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparaisons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparaisons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logiques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structures-de-controle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structures de Contrôle
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structures de Contrôle">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conditions-ifelse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions (if/else)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Conditions (if/else)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntaxe-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Syntaxe Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avec-alternative" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avec Alternative
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions Multiples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditions-complexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditions Complexes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boucles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boucles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boucle-for-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boucle For Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucle-for-avec-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boucle For avec Pas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucle-while" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boucle While
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-pratiques-de-boucles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples Pratiques de Boucles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-des-fonctions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure des Fonctions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Structure des Fonctions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-obligatoires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions Obligatoires
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonctions-personnalisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions Personnalisées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organisation-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation du Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Organisation du Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-recommandee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure Recommandée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-graphique" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Graphique
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Graphique">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gestion-de-lecran" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion de l'Écran
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion de l&#39;Écran">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nettoyage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nettoyage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#formes-geometriques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formes Géométriques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formes Géométriques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rectangles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rectangles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cercles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cercles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lignes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lignes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pixels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pixels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texte-et-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texte et Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Texte et Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#affichage-de-texte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Affichage de Texte
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#couleurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Couleurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Couleurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formats-supportes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Formats Supportés
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#palette-recommandee" class="md-nav__link">
+    <span class="md-ellipsis">
+      Palette Recommandée
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sons-et-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sons et Audio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sons et Audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jouer-des-sons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jouer des Sons
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-dusage-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples d'Usage Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametres-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paramètres Audio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Entrées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Entrées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detection-des-touches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Détection des Touches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Détection des Touches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-principale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonction Principale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touches-supportees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Touches Supportées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemples-de-controles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples de Contrôles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples de Contrôles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mouvement-basique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mouvement Basique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouvement-avec-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mouvement avec Limites
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-speciales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actions Spéciales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#controles-de-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles de Jeu
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples Pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-animation-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Animation Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-collecteur-dobjets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Collecteur d'Objets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-jeu-de-tir-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Jeu de Tir Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonnes-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bonnes Pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bonnes Pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-structure-du-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Structure du Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Structure du Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organisation-claire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organisation Claire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nommage-coherent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nommage Cohérent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimisation-des-rendus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisation des Rendus
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculs-optimises" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculs Optimisés
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-lisibilite" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Lisibilité
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Lisibilité">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commentaires-utiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commentaires Utiles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-auto-documente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code Auto-Documenté
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gestion-detat" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Gestion d'État
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gestion d&#39;État">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etats-de-jeu-clairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      États de Jeu Clairs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-debogage" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Débogage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Débogage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#messages-de-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages de Debug
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recapitulatif" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Récapitulatif
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Récapitulatif">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etapes-suivantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étapes Suivantes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-jeux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="langage-kod-documentation-complete">🧠 Langage Kod - Documentation Complète</h1>
+<p>Le langage <strong>Kod</strong> est un langage de programmation simplifié conçu spécifiquement pour l'apprentissage de la programmation à travers la création de jeux 2D.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#philosophie">Philosophie du Langage</a></li>
+<li><a href="#syntaxe-de-base">Syntaxe de Base</a></li>
+<li><a href="#variables-et-types">Variables et Types</a></li>
+<li><a href="#structures-de-contrôle">Structures de Contrôle</a></li>
+<li><a href="#fonctions">Fonctions</a></li>
+<li><a href="#api-graphique">API Graphique</a></li>
+<li><a href="#gestion-des-entrées">Gestion des Entrées</a></li>
+<li><a href="#exemples-pratiques">Exemples Pratiques</a></li>
+<li><a href="#bonnes-pratiques">Bonnes Pratiques</a></li>
+</ol>
+<hr />
+<h2 id="philosophie">Philosophie</h2>
+<h3 id="quest-ce-que-kod">Qu'est-ce que Kod ?</h3>
+<p>Kod est un <strong>langage de script</strong> inspiré de Python, LUA et Pascal, conçu pour :</p>
+<p>✅ <strong>Simplicité</strong> : Syntaxe épurée, pas de point-virgules<br />
+✅ <strong>Lisibilité</strong> : Structure claire avec <code>end</code> explicites<br />
+✅ <strong>Accessibilité</strong> : Idéal pour les débutants<br />
+✅ <strong>Immédiat</strong> : Résultats visuels instantanés<br />
+✅ <strong>Ludique</strong> : Orienté création de jeux  </p>
+<h3 id="compilation-automatique">Compilation Automatique</h3>
+<p>Kod est <strong>transpilé</strong> automatiquement en JavaScript ES6 :</p>
+<pre><code class="language-kod">// Code Kod
+let speed = 5
+function update()
+    x = x + speed
+end
+</code></pre>
+<pre><code class="language-javascript">// JavaScript généré
+class KodGame {
+    constructor(emulator) {
+        this.speed = 5;
+    }
+
+    update() {
+        this.x = this.x + this.speed;
+    }
+}
+</code></pre>
+<hr />
+<h2 id="syntaxe-de-base">Syntaxe de Base</h2>
+<h3 id="structure-dun-programme">Structure d'un Programme</h3>
+<pre><code class="language-kod">// === VARIABLES GLOBALES ===
+let playerX = 200
+let playerY = 150
+let score = 0
+
+// === FONCTION DE DÉMARRAGE ===
+function start()
+    clearScreen(&quot;#000033&quot;)
+    drawText(&quot;Jeu démarré!&quot;, 100, 50, &quot;#FFFFFF&quot;)
+end
+
+// === BOUCLE PRINCIPALE ===
+function update()
+    // Effacer l'écran
+    clearScreen(&quot;#000033&quot;)
+
+    // Logique du jeu
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - 3
+    end
+
+    // Affichage
+    drawCircle(playerX, playerY, 15, &quot;#FF6600&quot;)
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="regles-syntaxiques">Règles Syntaxiques</h3>
+<h4 id="1-commentaires">1. <strong>Commentaires</strong></h4>
+<pre><code class="language-kod">// Commentaire sur une ligne
+// Les commentaires sont ignorés par le compilateur
+
+let x = 100  // Commentaire en fin de ligne
+</code></pre>
+<h4 id="2-casse-et-nommage">2. <strong>Casse et Nommage</strong></h4>
+<pre><code class="language-kod">// Variables : camelCase recommandé
+let playerSpeed = 5
+let enemyCount = 3
+let isGameOver = false
+
+// Fonctions : camelCase obligatoire
+function updatePlayer()
+    // ...
+end
+
+function checkCollision()
+    // ...
+end
+</code></pre>
+<h4 id="3-indentation">3. <strong>Indentation</strong></h4>
+<ul>
+<li><strong>Recommandée</strong> : 4 espaces</li>
+<li><strong>Flexible</strong> : Tabs acceptés</li>
+<li><strong>Important</strong> : Cohérence dans tout le code</li>
+</ul>
+<h4 id="4-blocs-de-code">4. <strong>Blocs de Code</strong></h4>
+<pre><code class="language-kod">// Toujours terminer les blocs par 'end'
+if condition
+    // instructions
+end
+
+function maFonction()
+    // instructions
+end
+
+for i = 1 to 10
+    // instructions
+end
+</code></pre>
+<hr />
+<h2 id="variables-et-types">Variables et Types</h2>
+<h3 id="declaration-de-variables">Déclaration de Variables</h3>
+<pre><code class="language-kod">// Déclaration avec valeur initiale
+let x = 100
+let y = 200
+let name = &quot;Player&quot;
+let isAlive = true
+
+// Variables numériques
+let speed = 2.5
+let angle = 3.14159
+let health = 100
+
+// Variables texte (chaînes)
+let title = &quot;Mon Jeu&quot;
+let message = &quot;Game Over&quot;
+
+// Variables booléennes
+let gameStarted = false
+let hasKey = true
+</code></pre>
+<h3 id="types-supportes">Types Supportés</h3>
+<h4 id="1-nombres">1. <strong>Nombres</strong></h4>
+<pre><code class="language-kod">let entier = 42          // Nombre entier
+let decimal = 3.14       // Nombre décimal
+let negatif = -10        // Nombre négatif
+let grand = 1000000      // Grand nombre
+</code></pre>
+<h4 id="2-chaines-de-caracteres">2. <strong>Chaînes de Caractères</strong></h4>
+<pre><code class="language-kod">let simple = &quot;Hello&quot;
+let guillemets = 'World'
+let phrase = &quot;Bonjour le monde!&quot;
+let vide = &quot;&quot;
+
+// Concaténation avec +
+let complet = &quot;Score: &quot; + score
+let coordonnees = &quot;Position (&quot; + x + &quot;, &quot; + y + &quot;)&quot;
+</code></pre>
+<h4 id="3-booleens">3. <strong>Booléens</strong></h4>
+<pre><code class="language-kod">let vrai = true
+let faux = false
+
+// Résultats de comparaisons
+let estGrand = (x &gt; 100)
+let estEgal = (score == 0)
+</code></pre>
+<h3 id="operations-sur-variables">Opérations sur Variables</h3>
+<h4 id="arithmetiques">Arithmétiques</h4>
+<pre><code class="language-kod">let a = 10
+let b = 3
+
+let somme = a + b        // 13
+let difference = a - b   // 7
+let produit = a * b      // 30
+let quotient = a / b     // 3.33...
+let modulo = a % b       // 1 (reste)
+</code></pre>
+<h4 id="comparaisons">Comparaisons</h4>
+<pre><code class="language-kod">let x = 5
+let y = 10
+
+// Égalité
+x == y    // false
+x != y    // true
+
+// Ordre
+x &lt; y     // true
+x &gt; y     // false
+x &lt;= 5    // true
+x &gt;= 10   // false
+</code></pre>
+<h4 id="logiques">Logiques</h4>
+<pre><code class="language-kod">let a = true
+let b = false
+
+// ET logique
+a &amp;&amp; b    // false
+
+// OU logique  
+a || b    // true
+
+// NON logique
+!a        // false
+!b        // true
+</code></pre>
+<hr />
+<h2 id="structures-de-controle">Structures de Contrôle</h2>
+<h3 id="conditions-ifelse">Conditions (if/else)</h3>
+<h4 id="syntaxe-simple">Syntaxe Simple</h4>
+<pre><code class="language-kod">if condition
+    // instructions si vrai
+end
+</code></pre>
+<h4 id="avec-alternative">Avec Alternative</h4>
+<pre><code class="language-kod">if playerHealth &gt; 0
+    drawCircle(playerX, playerY, 20, &quot;#00FF00&quot;)
+else
+    drawText(&quot;GAME OVER&quot;, 150, 150, &quot;#FF0000&quot;)
+end
+</code></pre>
+<h4 id="conditions-multiples">Conditions Multiples</h4>
+<pre><code class="language-kod">if score &lt; 100
+    drawText(&quot;Débutant&quot;, 10, 10, &quot;#YELLOW&quot;)
+else if score &lt; 500
+    drawText(&quot;Intermédiaire&quot;, 10, 10, &quot;#ORANGE&quot;)
+else if score &lt; 1000
+    drawText(&quot;Avancé&quot;, 10, 10, &quot;#RED&quot;)
+else
+    drawText(&quot;Expert!&quot;, 10, 10, &quot;#GOLD&quot;)
+end
+</code></pre>
+<h4 id="conditions-complexes">Conditions Complexes</h4>
+<pre><code class="language-kod">// Plusieurs conditions avec ET
+if (playerX &gt; 0) &amp;&amp; (playerX &lt; 400) &amp;&amp; (playerY &gt; 0) &amp;&amp; (playerY &lt; 300)
+    // Joueur dans les limites
+end
+
+// Plusieurs conditions avec OU
+if isKeyPressed(&quot;space&quot;) || isKeyPressed(&quot;enter&quot;)
+    // Tir ou validation
+end
+
+// Négation
+if !gameOver &amp;&amp; !isPaused
+    // Continuer le jeu
+end
+</code></pre>
+<h3 id="boucles">Boucles</h3>
+<h4 id="boucle-for-simple">Boucle For Simple</h4>
+<pre><code class="language-kod">// Compter de 1 à 10
+for i = 1 to 10
+    drawCircle(i * 30, 100, 10, &quot;#FF0000&quot;)
+end
+</code></pre>
+<h4 id="boucle-for-avec-pas">Boucle For avec Pas</h4>
+<pre><code class="language-kod">// Compter de 0 à 100 par pas de 10
+for x = 0 to 100 step 10
+    drawLine(x, 0, x, 300, &quot;#333333&quot;)
+end
+</code></pre>
+<h4 id="boucle-while">Boucle While</h4>
+<pre><code class="language-kod">let x = 0
+while x &lt; 400
+    drawPixel(x, 150, &quot;#FFFFFF&quot;)
+    x = x + 5
+end
+</code></pre>
+<h4 id="exemples-pratiques-de-boucles">Exemples Pratiques de Boucles</h4>
+<pre><code class="language-kod">// Dessiner une grille
+for x = 0 to 400 step 20
+    for y = 0 to 300 step 20
+        drawPixel(x, y, &quot;#444444&quot;)
+    end
+end
+
+// Afficher plusieurs ennemis
+for i = 1 to 5
+    let enemyX = i * 70
+    drawRect(enemyX, 200, 20, 20, &quot;#FF0000&quot;)
+end
+
+// Animation de particules
+let particleX = 0
+while particleX &lt; 400
+    drawCircle(particleX, 150, 3, &quot;#FFFF00&quot;)
+    particleX = particleX + 8
+end
+</code></pre>
+<hr />
+<h2 id="fonctions">Fonctions</h2>
+<h3 id="structure-des-fonctions">Structure des Fonctions</h3>
+<h4 id="fonctions-obligatoires">Fonctions Obligatoires</h4>
+<pre><code class="language-kod">function start()
+    // Appelée UNE FOIS au démarrage du jeu
+    // Initialisation, écran de démarrage
+    clearScreen(&quot;#000000&quot;)
+    drawText(&quot;Initialisation...&quot;, 100, 150, &quot;#FFFFFF&quot;)
+end
+
+function update()
+    // Appelée CHAQUE FRAME (60 fois par seconde)
+    // Logique principale du jeu
+    clearScreen(&quot;#000033&quot;)
+
+    // Mise à jour des objets
+    updatePlayer()
+    updateEnemies()
+
+    // Affichage
+    drawPlayer()
+    drawEnemies()
+    drawUI()
+end
+</code></pre>
+<h4 id="fonctions-personnalisees">Fonctions Personnalisées</h4>
+<pre><code class="language-kod">// Fonction sans paramètres
+function resetGame()
+    playerX = 200
+    playerY = 150
+    score = 0
+    gameOver = false
+end
+
+// Fonction avec logique
+function updatePlayer()
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - playerSpeed
+    end
+    if isKeyPressed(&quot;right&quot;) 
+        playerX = playerX + playerSpeed
+    end
+
+    // Limites de l'écran
+    if playerX &lt; 0
+        playerX = 0
+    end
+    if playerX &gt; 380
+        playerX = 380
+    end
+end
+
+// Fonction d'affichage
+function drawPlayer()
+    drawRect(playerX, playerY, 20, 20, &quot;#00FF00&quot;)
+
+    if hasShield
+        drawCircle(playerX + 10, playerY + 10, 25, &quot;#0066FF&quot;)
+    end
+end
+</code></pre>
+<h3 id="organisation-du-code">Organisation du Code</h3>
+<h4 id="structure-recommandee">Structure Recommandée</h4>
+<pre><code class="language-kod">// === VARIABLES GLOBALES ===
+let playerX = 200
+let playerY = 150
+let enemies = []
+let score = 0
+
+// === FONCTION PRINCIPALE ===
+function start()
+    initializeGame()
+end
+
+function update()
+    handleInput()
+    updateGame()
+    renderGame()
+end
+
+// === FONCTIONS D'INITIALISATION ===
+function initializeGame()
+    clearScreen(&quot;#001122&quot;)
+    createEnemies()
+    showStartMessage()
+end
+
+// === FONCTIONS DE LOGIQUE ===
+function handleInput()
+    if isKeyPressed(&quot;left&quot;)
+        movePlayerLeft()
+    end
+    if isKeyPressed(&quot;right&quot;)
+        movePlayerRight()
+    end
+end
+
+function updateGame()
+    updatePlayer()
+    updateEnemies()
+    checkCollisions()
+end
+
+// === FONCTIONS D'AFFICHAGE ===
+function renderGame()
+    clearScreen(&quot;#001122&quot;)
+    drawBackground()
+    drawPlayer()
+    drawEnemies()
+    drawUI()
+end
+</code></pre>
+<hr />
+<h2 id="api-graphique">API Graphique</h2>
+<h3 id="gestion-de-lecran">Gestion de l'Écran</h3>
+<h4 id="nettoyage">Nettoyage</h4>
+<pre><code class="language-kod">// Effacer tout l'écran avec une couleur
+clearScreen(&quot;#000000&quot;)      // Noir
+clearScreen(&quot;#FFFFFF&quot;)      // Blanc  
+clearScreen(&quot;#003366&quot;)      // Bleu foncé
+clearScreen(&quot;#RGB&quot;)         // Format hexadécimal
+</code></pre>
+<h3 id="formes-geometriques">Formes Géométriques</h3>
+<h4 id="rectangles">Rectangles</h4>
+<pre><code class="language-kod">// Rectangle plein
+drawRect(x, y, width, height, color)
+drawRect(100, 50, 80, 40, &quot;#FF0000&quot;)
+
+// Exemples
+drawRect(0, 0, 400, 20, &quot;#333333&quot;)        // Barre supérieure
+drawRect(playerX, playerY, 20, 20, &quot;#00FF00&quot;)  // Joueur carré
+</code></pre>
+<h4 id="cercles">Cercles</h4>
+<pre><code class="language-kod">// Cercle plein
+drawCircle(x, y, radius, color)
+drawCircle(200, 150, 25, &quot;#FFFF00&quot;)
+
+// Exemples  
+drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)  // Balle
+drawCircle(mouseX, mouseY, 5, &quot;#FF0000&quot;)         // Curseur
+</code></pre>
+<h4 id="lignes">Lignes</h4>
+<pre><code class="language-kod">// Ligne droite
+drawLine(x1, y1, x2, y2, color)
+drawLine(0, 150, 400, 150, &quot;#666666&quot;)
+
+// Exemples
+drawLine(0, 0, 400, 300, &quot;#FFFFFF&quot;)      // Diagonale
+drawLine(playerX, playerY, targetX, targetY, &quot;#FF0000&quot;)  // Visée
+</code></pre>
+<h4 id="pixels">Pixels</h4>
+<pre><code class="language-kod">// Point unique
+drawPixel(x, y, color)
+drawPixel(200, 150, &quot;#FFFFFF&quot;)
+
+// Utile pour les effets
+for i = 1 to 100
+    drawPixel(randomX, randomY, &quot;#FFFF00&quot;)  // Étoiles
+end
+</code></pre>
+<h3 id="texte-et-interface">Texte et Interface</h3>
+<h4 id="affichage-de-texte">Affichage de Texte</h4>
+<pre><code class="language-kod">// Texte simple
+drawText(text, x, y, color)
+drawText(&quot;Score: 1250&quot;, 10, 20, &quot;#FFFFFF&quot;)
+
+// Exemples d'interface
+drawText(&quot;GAME OVER&quot;, 150, 150, &quot;#FF0000&quot;)
+drawText(&quot;Niveau &quot; + currentLevel, 10, 40, &quot;#FFFF00&quot;)
+drawText(&quot;Vies: &quot; + lives, 10, 60, &quot;#00FF00&quot;)
+drawText(&quot;Temps: &quot; + timeRemaining, 300, 20, &quot;#CYAN&quot;)
+</code></pre>
+<h3 id="couleurs">Couleurs</h3>
+<h4 id="formats-supportes">Formats Supportés</h4>
+<pre><code class="language-kod">// Hexadécimal (recommandé)
+&quot;#FF0000&quot;    // Rouge pur
+&quot;#00FF00&quot;    // Vert pur  
+&quot;#0000FF&quot;    // Bleu pur
+&quot;#FFFFFF&quot;    // Blanc
+&quot;#000000&quot;    // Noir
+&quot;#808080&quot;    // Gris
+
+// Couleurs nommées (limitées)
+&quot;red&quot;        // Rouge
+&quot;green&quot;      // Vert
+&quot;blue&quot;       // Bleu
+&quot;yellow&quot;     // Jaune
+&quot;white&quot;      // Blanc
+&quot;black&quot;      // Noir
+</code></pre>
+<h4 id="palette-recommandee">Palette Recommandée</h4>
+<pre><code class="language-kod">// Couleurs de jeu classiques
+let colorBackground = &quot;#001122&quot;    // Bleu très foncé
+let colorPlayer = &quot;#00FF00&quot;        // Vert vif
+let colorEnemy = &quot;#FF0000&quot;         // Rouge vif
+let colorUI = &quot;#FFFFFF&quot;           // Blanc
+let colorPowerup = &quot;#FFFF00&quot;      // Jaune
+let colorBorder = &quot;#666666&quot;       // Gris moyen
+</code></pre>
+<h3 id="sons-et-audio">Sons et Audio</h3>
+<h4 id="jouer-des-sons">Jouer des Sons</h4>
+<pre><code class="language-kod">// Jouer une note musicale
+playSound(note, durée)
+playSound(&quot;do&quot;, 0.3)     // Note do pendant 0.3 secondes
+playSound(&quot;re&quot;, 0.5)     // Note ré pendant 0.5 secondes
+
+// Notes disponibles
+playSound(&quot;do&quot;, 0.2)     // Do (C4 - 261.63 Hz)
+playSound(&quot;re&quot;, 0.2)     // Ré (D4 - 293.66 Hz)  
+playSound(&quot;mi&quot;, 0.2)     // Mi (E4 - 329.63 Hz)
+playSound(&quot;fa&quot;, 0.2)     // Fa (F4 - 349.23 Hz)
+playSound(&quot;sol&quot;, 0.2)    // Sol (G4 - 392.00 Hz)
+playSound(&quot;la&quot;, 0.2)     // La (A4 - 440.00 Hz)
+playSound(&quot;si&quot;, 0.2)     // Si (B4 - 493.88 Hz)
+playSound(&quot;do2&quot;, 0.2)    // Do aigu (C5 - 523.25 Hz)
+</code></pre>
+<h4 id="exemples-dusage-audio">Exemples d'Usage Audio</h4>
+<pre><code class="language-kod">// Effet sonore de saut
+if isKeyPressed(&quot;up&quot;) &amp;&amp; onGround
+    playerY = playerY - jumpPower
+    playSound(&quot;do&quot;, 0.1)  // Petit bip de saut
+end
+
+// Mélodie de victoire
+function playVictoryMelody()
+    playSound(&quot;do&quot;, 0.2)
+    playSound(&quot;mi&quot;, 0.2)  
+    playSound(&quot;sol&quot;, 0.4)
+end
+
+// Son d'erreur/dégât
+if collision
+    playSound(&quot;si&quot;, 0.1)   // Note aigue pour l'alerte
+end
+
+// Séquence musicale simple
+let melodyStep = 0
+let melodyNotes = [&quot;do&quot;, &quot;re&quot;, &quot;mi&quot;, &quot;do&quot;]
+
+if frameCount % 30 == 0  // Chaque demi-seconde
+    playSound(melodyNotes[melodyStep], 0.2)
+    melodyStep = melodyStep + 1
+    if melodyStep &gt;= 4
+        melodyStep = 0
+    end
+end
+</code></pre>
+<h4 id="parametres-audio">Paramètres Audio</h4>
+<pre><code class="language-kod">// Durée par défaut : 0.2 seconde
+playSound(&quot;do&quot;)          // Équivaut à playSound(&quot;do&quot;, 0.2)
+
+// Durées recommandées
+playSound(&quot;do&quot;, 0.1)     // Son court (effet)
+playSound(&quot;re&quot;, 0.3)     // Son moyen (action)
+playSound(&quot;mi&quot;, 0.5)     // Son long (mélodie)
+playSound(&quot;fa&quot;, 1.0)     // Son très long (ambiance)
+</code></pre>
+<p><strong>Notes techniques :</strong>
+- Les sons sont générés par oscillateur (pas de fichiers audio)
+- Type d'onde : <code>square</code> (son rétro 8-bit)
+- Volume automatiquement ajusté avec fade-out
+- Nécessite une interaction utilisateur pour initialiser l'audio</p>
+<hr />
+<h2 id="gestion-des-entrees">Gestion des Entrées</h2>
+<h3 id="detection-des-touches">Détection des Touches</h3>
+<h4 id="fonction-principale">Fonction Principale</h4>
+<pre><code class="language-kod">isKeyPressed(keyName)   // Retourne true/false
+</code></pre>
+<h4 id="touches-supportees">Touches Supportées</h4>
+<pre><code class="language-kod">// Flèches directionnelles
+isKeyPressed(&quot;up&quot;)      // Flèche Haut ou W
+isKeyPressed(&quot;down&quot;)    // Flèche Bas ou S  
+isKeyPressed(&quot;left&quot;)    // Flèche Gauche ou A
+isKeyPressed(&quot;right&quot;)   // Flèche Droite ou D
+
+// Espace
+isKeyPressed(&quot;space&quot;)   // Barre d'espace
+</code></pre>
+<h3 id="exemples-de-controles">Exemples de Contrôles</h3>
+<h4 id="mouvement-basique">Mouvement Basique</h4>
+<pre><code class="language-kod">function update()
+    // Mouvement du joueur
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - playerSpeed
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + playerSpeed
+    end
+    if isKeyPressed(&quot;up&quot;)
+        playerY = playerY - playerSpeed
+    end
+    if isKeyPressed(&quot;down&quot;)
+        playerY = playerY + playerSpeed
+    end
+end
+</code></pre>
+<h4 id="mouvement-avec-limites">Mouvement avec Limites</h4>
+<pre><code class="language-kod">function updatePlayer()
+    let oldX = playerX
+    let oldY = playerY
+
+    // Tentative de mouvement
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - playerSpeed
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + playerSpeed
+    end
+
+    // Vérification des limites
+    if playerX &lt; 0
+        playerX = 0
+    end
+    if playerX &gt; 380  // 400 - largeur joueur (20)
+        playerX = 380
+    end
+end
+</code></pre>
+<h4 id="actions-speciales">Actions Spéciales</h4>
+<pre><code class="language-kod">function handleActions()
+    // Tir avec espace
+    if isKeyPressed(&quot;space&quot;)
+        if canShoot
+            createBullet(playerX + 10, playerY)
+            canShoot = false
+            shootCooldown = 10
+        end
+    end
+
+    // Gestion du cooldown
+    if shootCooldown &gt; 0
+        shootCooldown = shootCooldown - 1
+    end
+    if shootCooldown == 0
+        canShoot = true
+    end
+end
+</code></pre>
+<h4 id="controles-de-jeu">Contrôles de Jeu</h4>
+<pre><code class="language-kod">function handleGameControls()
+    // Pause/Reprise
+    if isKeyPressed(&quot;space&quot;) &amp;&amp; gameStarted &amp;&amp; !gamePaused
+        gamePaused = true
+    else if isKeyPressed(&quot;space&quot;) &amp;&amp; gamePaused
+        gamePaused = false
+    end
+
+    // Redémarrage
+    if isKeyPressed(&quot;space&quot;) &amp;&amp; gameOver
+        restartGame()
+    end
+end
+</code></pre>
+<hr />
+<h2 id="exemples-pratiques">Exemples Pratiques</h2>
+<h3 id="1-animation-simple">1. Animation Simple</h3>
+<pre><code class="language-kod">let x = 0
+let direction = 1
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Animation rebond
+    x = x + (direction * 3)
+    if x &gt; 380 || x &lt; 0
+        direction = direction * -1
+    end
+
+    drawCircle(x, 150, 20, &quot;#FF6600&quot;)
+end
+</code></pre>
+<h3 id="2-collecteur-dobjets">2. Collecteur d'Objets</h3>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 250
+let coinX = 100
+let coinY = 100
+let score = 0
+
+function start()
+    clearScreen(&quot;#001122&quot;)
+end
+
+function update()
+    clearScreen(&quot;#001122&quot;)
+
+    // Contrôles joueur
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - 3
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + 3
+    end
+
+    // Collision avec pièce
+    let distance = (playerX - coinX) * (playerX - coinX) + (playerY - coinY) * (playerY - coinY)
+    if distance &lt; 400  // 20*20 pixels de distance
+        score = score + 10
+        // Nouvelle position aléatoire pour la pièce
+        coinX = 50 + (score % 300)
+        coinY = 50 + ((score * 3) % 200)
+    end
+
+    // Affichage
+    drawRect(playerX - 10, playerY - 10, 20, 20, &quot;#00FF00&quot;)  // Joueur
+    drawCircle(coinX, coinY, 8, &quot;#FFFF00&quot;)                   // Pièce
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)           // Interface
+end
+</code></pre>
+<h3 id="3-jeu-de-tir-simple">3. Jeu de Tir Simple</h3>
+<pre><code class="language-kod">let playerX = 200
+let bullets = []
+let enemies = []
+let score = 0
+
+function start()
+    // Créer quelques ennemis
+    for i = 1 to 5
+        // enemies[i] sera géré inline dans update()
+    end
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôles joueur
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; playerX &gt; 0
+        playerX = playerX - 4
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; playerX &lt; 380
+        playerX = playerX + 4
+    end
+
+    // Tir (simplifié - une balle à la fois)
+    if isKeyPressed(&quot;space&quot;)
+        bulletX = playerX
+        bulletY = 280
+        bulletActive = true
+    end
+
+    // Mise à jour balle
+    if bulletActive
+        bulletY = bulletY - 6
+        if bulletY &lt; 0
+            bulletActive = false
+        end
+        drawRect(bulletX, bulletY, 3, 8, &quot;#FFFFFF&quot;)
+    end
+
+    // Ennemis simples (positions fixes)
+    for i = 1 to 5
+        let enemyX = i * 70
+        let enemyY = 50
+        drawRect(enemyX, enemyY, 20, 20, &quot;#FF0000&quot;)
+
+        // Collision balle-ennemi (basique)
+        if bulletActive
+            if (bulletX &gt; enemyX - 10) &amp;&amp; (bulletX &lt; enemyX + 30) &amp;&amp; (bulletY &lt; enemyY + 20) &amp;&amp; (bulletY &gt; enemyY - 10)
+                score = score + 100
+                bulletActive = false
+                // L'ennemi &quot;disparaît&quot; temporairement
+            end
+        end
+    end
+
+    // Affichage
+    drawRect(playerX - 10, 280, 20, 20, &quot;#00FF00&quot;)  // Joueur
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)   // Interface
+end
+</code></pre>
+<hr />
+<h2 id="bonnes-pratiques">Bonnes Pratiques</h2>
+<h3 id="1-structure-du-code">1. Structure du Code</h3>
+<h4 id="organisation-claire">Organisation Claire</h4>
+<pre><code class="language-kod">// === CONSTANTES ET CONFIGURATION ===
+let SCREEN_WIDTH = 400
+let SCREEN_HEIGHT = 300
+let PLAYER_SPEED = 4
+
+// === VARIABLES DE JEU ===
+let playerX = 200
+let playerY = 150
+let gameState = &quot;playing&quot;  // &quot;menu&quot;, &quot;playing&quot;, &quot;gameover&quot;
+
+// === FONCTIONS PRINCIPALES ===
+function start()
+    initializeGame()
+end
+
+function update()
+    if gameState == &quot;menu&quot;
+        handleMenu()
+    else if gameState == &quot;playing&quot;
+        handleGameplay()
+    else if gameState == &quot;gameover&quot;
+        handleGameOver()
+    end
+end
+
+// === FONCTIONS SPÉCIALISÉES ===
+function initializeGame()
+    // ...
+end
+</code></pre>
+<h4 id="nommage-coherent">Nommage Cohérent</h4>
+<pre><code class="language-kod">// ✅ Bon nommage
+let playerSpeed = 4
+let enemyCount = 5
+let isGameOver = false
+
+function updatePlayer()
+    // ...
+end
+
+function drawEnemies()
+    // ...
+end
+
+// ❌ Mauvais nommage
+let s = 4           // Pas clair
+let x1 = 5          // Pas descriptif
+let flag = false    // Trop vague
+</code></pre>
+<h3 id="2-performance">2. Performance</h3>
+<h4 id="optimisation-des-rendus">Optimisation des Rendus</h4>
+<pre><code class="language-kod">function update()
+    // ✅ Effacer UNE FOIS par frame
+    clearScreen(&quot;#000033&quot;)
+
+    // ✅ Grouper les dessins similaires
+    drawBackground()
+    drawAllEnemies()
+    drawPlayer()
+    drawUI()
+end
+
+// ❌ À éviter
+function update()
+    clearScreen(&quot;#000033&quot;)
+    drawPlayer()
+    clearScreen(&quot;#000033&quot;)  // ❌ Double effacement
+    drawEnemy()
+    clearScreen(&quot;#000033&quot;)  // ❌ Triple effacement
+end
+</code></pre>
+<h4 id="calculs-optimises">Calculs Optimisés</h4>
+<pre><code class="language-kod">// ✅ Calculer une fois, utiliser plusieurs fois
+let playerCenterX = playerX + 10
+let playerCenterY = playerY + 10
+
+// Utiliser les valeurs calculées
+drawCircle(playerCenterX, playerCenterY, 15, &quot;#00FF00&quot;)
+checkCollisionWithEnemies(playerCenterX, playerCenterY)
+
+// ❌ Calculs répétitifs
+drawCircle(playerX + 10, playerY + 10, 15, &quot;#00FF00&quot;)
+checkCollisionWithEnemies(playerX + 10, playerY + 10)  // Recalcule
+</code></pre>
+<h3 id="3-lisibilite">3. Lisibilité</h3>
+<h4 id="commentaires-utiles">Commentaires Utiles</h4>
+<pre><code class="language-kod">// === GESTION DES COLLISIONS ===
+function checkPlayerEnemyCollision()
+    for i = 1 to enemyCount
+        let enemyX = enemies[i].x
+        let enemyY = enemies[i].y
+
+        // Calcul de la distance euclidienne
+        let dx = playerX - enemyX
+        let dy = playerY - enemyY
+        let distance = (dx * dx) + (dy * dy)
+
+        // Collision si distance &lt; rayon combiné au carré
+        if distance &lt; 400  // (10+10)² = 400
+            handlePlayerHit()
+        end
+    end
+end
+</code></pre>
+<h4 id="code-auto-documente">Code Auto-Documenté</h4>
+<pre><code class="language-kod">// ✅ Variables explicites
+let COLLISION_RADIUS = 20
+let PLAYER_LIVES = 3
+let ENEMY_SPAWN_RATE = 60  // frames entre chaque spawn
+
+if frameCount % ENEMY_SPAWN_RATE == 0
+    spawnNewEnemy()
+end
+
+// ❌ Nombres magiques
+if frameCount % 60 == 0  // Pourquoi 60 ?
+    spawnNewEnemy()
+end
+</code></pre>
+<h3 id="4-gestion-detat">4. Gestion d'État</h3>
+<h4 id="etats-de-jeu-clairs">États de Jeu Clairs</h4>
+<pre><code class="language-kod">let gameState = &quot;menu&quot;  // &quot;menu&quot;, &quot;playing&quot;, &quot;paused&quot;, &quot;gameover&quot;
+
+function update()
+    if gameState == &quot;menu&quot;
+        handleMenuInput()
+        drawMenu()
+    else if gameState == &quot;playing&quot;
+        updateGameLogic()
+        drawGame()
+    else if gameState == &quot;paused&quot;
+        handlePauseInput()
+        drawPausedGame()
+    else if gameState == &quot;gameover&quot;
+        handleGameOverInput()
+        drawGameOver()
+    end
+end
+</code></pre>
+<h3 id="5-debogage">5. Débogage</h3>
+<h4 id="messages-de-debug">Messages de Debug</h4>
+<pre><code class="language-kod">let DEBUG_MODE = true
+
+function update()
+    // Logique normale
+    updatePlayer()
+
+    // Informations de debug
+    if DEBUG_MODE
+        drawText(&quot;Player: (&quot; + playerX + &quot;, &quot; + playerY + &quot;)&quot;, 10, 280, &quot;#YELLOW&quot;)
+        drawText(&quot;FPS: 60&quot;, 300, 280, &quot;#YELLOW&quot;)
+        drawText(&quot;Enemies: &quot; + enemyCount, 10, 260, &quot;#YELLOW&quot;)
+    end
+end
+</code></pre>
+<hr />
+<h2 id="recapitulatif">🎯 Récapitulatif</h2>
+<p>Le langage <strong>Kod</strong> vous permet de créer facilement des jeux 2D avec :</p>
+<p>✅ <strong>Syntaxe simple</strong> : <code>if</code>/<code>end</code>, <code>function</code>/<code>end</code><br />
+✅ <strong>Typage automatique</strong> : Variables flexibles<br />
+✅ <strong>API graphique</strong> : Formes, texte, couleurs<br />
+✅ <strong>Gestion d'entrées</strong> : Clavier intégré<br />
+✅ <strong>Boucle de jeu</strong> : <code>start()</code> et <code>update()</code>  </p>
+<h3 id="etapes-suivantes">Étapes Suivantes</h3>
+<ol>
+<li>🎮 Explorez les <a href="../exemples/">Exemples Complets</a></li>
+<li>🎯 Suivez le <a href="../guide-jeux/">Guide de Création de Jeux</a></li>
+<li>🔍 Consultez l'<a href="../api-reference/">API de Référence</a></li>
+</ol>
+<p><strong>Bon coding avec Kod ! 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

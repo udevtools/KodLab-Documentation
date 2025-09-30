@@ -1,0 +1,2141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../api-reference/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Exemples - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exemples-et-tutoriels-kodlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exemples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../langage-kod/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-jeux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langage-kod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-jeux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemples-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemples Simples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemples Simples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hello-world-anime" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Hello World Animé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-controle-joueur" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Contrôle Joueur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-sons-et-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5. Sons et Audio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-collecteur-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Collecteur Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jeux-complets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jeux Complets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jeux Complets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pong-analyse-detaillee" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pong - Analyse Détaillée
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-snake-mecaniques-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Snake - Mécaniques Avancées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutoriels-pas-a-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutoriels Pas à Pas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutoriels Pas à Pas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tutoriel-1-creer-un-casse-briques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutoriel 1 : Créer un Casse-Briques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutoriel 1 : Créer un Casse-Briques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-structure-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Structure de Base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-mouvement-de-la-balle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Mouvement de la Balle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-controle-de-la-raquette" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Contrôle de la Raquette
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-4-ajout-des-briques-simplifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 4 : Ajout des Briques (Simplifié)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tutoriel-2-systeme-de-particules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutoriel 2 : Système de Particules
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tutoriel 2 : Système de Particules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objectif-creer-un-effet-dexplosion-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objectif : Créer un effet d'explosion simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#techniques-avancees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Techniques Avancées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techniques Avancées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-machine-a-etats-complexe" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Machine à États Complexe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-systeme-de-collision-avance" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Système de Collision Avancé
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#defis-et-exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Défis et Exercices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Défis et Exercices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#defi-1-pac-man-simplifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Défi 1 : Pac-Man Simplifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defi-2-tower-defense-minimaliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Défi 2 : Tower Defense Minimaliste
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defi-3-tetris-elementaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Défi 3 : Tetris Élémentaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercices-pratiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices Pratiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercices Pratiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercice-1-ameliorer-pong" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 1 : Améliorer Pong
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-2-etendre-snake" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 2 : Étendre Snake
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercice-3-creer-asteroids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercice 3 : Créer Asteroids
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="exemples-et-tutoriels-kodlab">🎮 Exemples et Tutoriels - KodLab</h1>
+<p>Collection complète d'exemples de jeux avec explications détaillées et code commenté.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#exemples-simples">Exemples Simples</a></li>
+<li><a href="#jeux-complets">Jeux Complets</a></li>
+<li><a href="#tutoriels-pas-à-pas">Tutoriels Pas à Pas</a></li>
+<li><a href="#techniques-avancées">Techniques Avancées</a></li>
+<li><a href="#défis-et-exercices">Défis et Exercices</a></li>
+</ol>
+<hr />
+<h2 id="exemples-simples">Exemples Simples</h2>
+<h3 id="1-hello-world-anime">1. Hello World Animé</h3>
+<p><strong>Objectif:</strong> Premier programme avec animation simple</p>
+<pre><code class="language-kod">// Variables globales
+let x = 0
+let direction = 1
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+    drawText(&quot;KodLab initialisé!&quot;, 100, 100, &quot;#FFFFFF&quot;)
+end
+
+function update()
+    // Effacer l'écran
+    clearScreen(&quot;#000033&quot;)
+
+    // Animation rebond horizontal
+    x = x + (direction * 3)
+    if x &gt; 350 || x &lt; 0
+        direction = direction * -1
+    end
+
+    // Affichage
+    drawCircle(x + 25, 150, 25, &quot;#FF6600&quot;)
+    drawText(&quot;Hello KodLab!&quot;, x, 100, &quot;#FFFFFF&quot;)
+    drawText(&quot;Position X: &quot; + x, 10, 20, &quot;#CCCCCC&quot;)
+end
+</code></pre>
+<p><strong>Concepts appris:</strong>
+- Structure de base (<code>start()</code> / <code>update()</code>)
+- Variables et modification
+- Animation simple
+- Rebonds et limites</p>
+<hr />
+<h3 id="2-controle-joueur">2. Contrôle Joueur</h3>
+<p><strong>Objectif:</strong> Contrôler un objet avec le clavier</p>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 150
+let speed = 4
+
+function start()
+    clearScreen(&quot;#001122&quot;)
+end
+
+function update()
+    clearScreen(&quot;#001122&quot;)
+
+    // Gestion des contrôles
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; playerX &gt; 20
+        playerX = playerX - speed
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; playerX &lt; 380
+        playerX = playerX + speed
+    end
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; playerY &gt; 20
+        playerY = playerY - speed
+    end
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; playerY &lt; 280
+        playerY = playerY + speed
+    end
+
+    // Affichage du joueur
+    drawRect(playerX - 10, playerY - 10, 20, 20, &quot;#00FF00&quot;)
+
+    // Interface
+    drawText(&quot;Utilisez les flèches pour vous déplacer&quot;, 50, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Position: (&quot; + playerX + &quot;, &quot; + playerY + &quot;)&quot;, 10, 280, &quot;#CCCCCC&quot;)
+end
+</code></pre>
+<p><strong>Concepts appris:</strong>
+- Gestion des entrées clavier
+- Limitation des mouvements
+- Coordonnées et positionnement</p>
+<hr />
+<h3 id="25-sons-et-audio">2.5. Sons et Audio</h3>
+<p><strong>Objectif:</strong> Découvrir le système audio avec des effets sonores</p>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 150
+let speed = 4
+let soundTimer = 0
+let noteIndex = 0
+let melody = [&quot;do&quot;, &quot;re&quot;, &quot;mi&quot;, &quot;fa&quot;, &quot;sol&quot;, &quot;la&quot;, &quot;si&quot;, &quot;do2&quot;]
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+    playSound(&quot;do&quot;, 0.5)  // Son de démarrage
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôles avec sons de pas
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; playerX &gt; 20
+        playerX = playerX - speed
+        if soundTimer &lt;= 0
+            playSound(&quot;re&quot;, 0.1)  // Son de pas
+            soundTimer = 10
+        end
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; playerX &lt; 380
+        playerX = playerX + speed
+        if soundTimer &lt;= 0
+            playSound(&quot;re&quot;, 0.1)
+            soundTimer = 10
+        end
+    end
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; playerY &gt; 20
+        playerY = playerY - speed
+        if soundTimer &lt;= 0
+            playSound(&quot;mi&quot;, 0.1)
+            soundTimer = 10
+        end
+    end
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; playerY &lt; 280
+        playerY = playerY + speed
+        if soundTimer &lt;= 0
+            playSound(&quot;mi&quot;, 0.1)
+            soundTimer = 10
+        end
+    end
+
+    // Action spéciale avec mélodie
+    if isKeyPressed(&quot;space&quot;)
+        if soundTimer &lt;= 0
+            playSound(melody[noteIndex], 0.3)
+            noteIndex = noteIndex + 1
+            if noteIndex &gt;= 8
+                noteIndex = 0
+            end
+            soundTimer = 20
+        end
+    end
+
+    // Décrémenter le timer
+    if soundTimer &gt; 0
+        soundTimer = soundTimer - 1
+    end
+
+    // Affichage
+    drawCircle(playerX, playerY, 15, &quot;#00FF00&quot;)
+
+    // Interface
+    drawText(&quot;Sons et Mouvements&quot;, 120, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Flèches: Se déplacer (sons de pas)&quot;, 50, 40, &quot;#CCCCCC&quot;)
+    drawText(&quot;Espace: Jouer mélodie&quot;, 50, 60, &quot;#CCCCCC&quot;)
+    drawText(&quot;Note suivante: &quot; + melody[noteIndex], 50, 280, &quot;#FFFF00&quot;)
+end
+</code></pre>
+<p><strong>Concepts appris:</strong>
+- Fonction <code>playSound()</code> et notes musicales
+- Effets sonores contextuels (pas, actions)
+- Timer pour éviter la répétition de sons
+- Séquences musicales simples</p>
+<hr />
+<h3 id="3-collecteur-simple">3. Collecteur Simple</h3>
+<p><strong>Objectif:</strong> Mécaniques de base avec objectifs</p>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 150
+let speed = 3
+
+let coinX = 100
+let coinY = 100
+let score = 0
+let collectionDistance = 30
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+    placeCoin()
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Mouvement joueur
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; playerX &gt; 15
+        playerX = playerX - speed
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; playerX &lt; 385
+        playerX = playerX + speed
+    end
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; playerY &gt; 15
+        playerY = playerY - speed
+    end
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; playerY &lt; 285
+        playerY = playerY + speed
+    end
+
+    // Vérification collision avec pièce
+    let dx = playerX - coinX
+    let dy = playerY - coinY
+    let distance = (dx * dx) + (dy * dy)
+
+    if distance &lt; (collectionDistance * collectionDistance)
+        score = score + 10
+        placeCoin()
+    end
+
+    // Affichage
+    drawCircle(playerX, playerY, 15, &quot;#00FF00&quot;)  // Joueur
+    drawCircle(coinX, coinY, 10, &quot;#FFFF00&quot;)     // Pièce
+
+    // Interface
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Collectez les pièces jaunes!&quot;, 10, 40, &quot;#CCCCCC&quot;)
+end
+
+function placeCoin()
+    // Position pseudo-aléatoire basée sur le score
+    coinX = 30 + ((score * 7) % 340)
+    coinY = 30 + ((score * 11) % 240)
+end
+</code></pre>
+<p><strong>Concepts appris:</strong>
+- Détection de collision (distance)
+- Score et récompenses
+- Placement d'objets
+- Fonctions personnalisées</p>
+<hr />
+<h2 id="jeux-complets">Jeux Complets</h2>
+<h3 id="1-pong-analyse-detaillee">1. Pong - Analyse Détaillée</h3>
+<p>Le Pong est un excellent exemple pour apprendre les mécaniques de base :</p>
+<pre><code class="language-kod">// === VARIABLES DE JEU ===
+let ballX = 200
+let ballY = 150
+let ballSpeedX = 3
+let ballSpeedY = 2
+let ballSize = 8
+
+// Raquette joueur (gauche)
+let playerY = 120
+let playerHeight = 60
+let playerWidth = 10
+let playerSpeed = 4
+
+// Raquette IA (droite)  
+let aiY = 120
+let aiHeight = 60
+let aiWidth = 10
+let aiSpeed = 2.5
+
+// Score
+let playerScore = 0
+let aiScore = 0
+
+function start()
+    clearScreen(&quot;#000000&quot;)
+    drawText(&quot;PONG - Utilisez les flèches Haut/Bas&quot;, 80, 30, &quot;#FFFFFF&quot;)
+end
+
+function update()
+    clearScreen(&quot;#001100&quot;)
+
+    // === CONTRÔLES JOUEUR ===
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; playerY &gt; 0
+        playerY = playerY - playerSpeed
+    end
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; playerY &lt; 240
+        playerY = playerY + playerSpeed
+    end
+
+    // === IA SIMPLE ===
+    // L'IA suit la balle avec un délai
+    let aiCenter = aiY + (aiHeight / 2)
+    if aiCenter &lt; ballY - 10
+        aiY = aiY + aiSpeed
+    else if aiCenter &gt; ballY + 10
+        aiY = aiY - aiSpeed
+    end
+
+    // Limites IA
+    if aiY &lt; 0
+        aiY = 0
+    end
+    if aiY &gt; 240
+        aiY = 240
+    end
+
+    // === PHYSIQUE DE LA BALLE ===
+    ballX = ballX + ballSpeedX
+    ballY = ballY + ballSpeedY
+
+    // Rebonds haut/bas
+    if ballY &lt;= ballSize || ballY &gt;= 300 - ballSize
+        ballSpeedY = ballSpeedY * -1
+    end
+
+    // === COLLISIONS RAQUETTES ===
+    // Collision raquette joueur
+    if ballX &lt;= playerWidth + ballSize &amp;&amp; 
+       ballY &gt;= playerY &amp;&amp; 
+       ballY &lt;= playerY + playerHeight &amp;&amp;
+       ballSpeedX &lt; 0
+        ballSpeedX = ballSpeedX * -1
+        ballX = playerWidth + ballSize  // Évite que la balle reste collée
+    end
+
+    // Collision raquette IA
+    if ballX &gt;= 400 - aiWidth - ballSize &amp;&amp; 
+       ballY &gt;= aiY &amp;&amp; 
+       ballY &lt;= aiY + aiHeight &amp;&amp;
+       ballSpeedX &gt; 0
+        ballSpeedX = ballSpeedX * -1
+        ballX = 400 - aiWidth - ballSize
+    end
+
+    // === SYSTÈME DE SCORE ===
+    // Point pour l'IA (balle sort à gauche)
+    if ballX &lt; -ballSize
+        aiScore = aiScore + 1
+        resetBall()
+    end
+
+    // Point pour le joueur (balle sort à droite)
+    if ballX &gt; 400 + ballSize
+        playerScore = playerScore + 1
+        resetBall()
+    end
+
+    // === AFFICHAGE ===
+    // Terrain
+    drawLine(200, 0, 200, 300, &quot;#333333&quot;)  // Ligne centrale
+
+    // Raquettes
+    drawRect(0, playerY, playerWidth, playerHeight, &quot;#FFFFFF&quot;)
+    drawRect(390, aiY, aiWidth, aiHeight, &quot;#FFFFFF&quot;)
+
+    // Balle
+    drawCircle(ballX, ballY, ballSize, &quot;#FFFFFF&quot;)
+
+    // Score
+    drawText(&quot;&quot; + playerScore, 180, 50, &quot;#FFFFFF&quot;)
+    drawText(&quot;&quot; + aiScore, 220, 50, &quot;#FFFFFF&quot;)
+
+    // Instructions
+    if playerScore == 0 &amp;&amp; aiScore == 0
+        drawText(&quot;Premier à 5 points gagne!&quot;, 100, 280, &quot;#CCCCCC&quot;)
+    end
+
+    // Victoire
+    if playerScore &gt;= 5
+        drawText(&quot;VICTOIRE JOUEUR!&quot;, 130, 150, &quot;#00FF00&quot;)
+    else if aiScore &gt;= 5
+        drawText(&quot;VICTOIRE IA!&quot;, 150, 150, &quot;#FF0000&quot;)
+    end
+end
+
+function resetBall()
+    ballX = 200
+    ballY = 150
+
+    // Direction aléatoire basée sur le score
+    if (playerScore + aiScore) % 2 == 0
+        ballSpeedX = 3
+    else
+        ballSpeedX = -3
+    end
+
+    ballSpeedY = 2
+end
+</code></pre>
+<p><strong>Techniques importantes:</strong>
+- <strong>Physique simple</strong> : Vitesse constante + rebonds
+- <strong>IA basique</strong> : Suivre la balle avec délai
+- <strong>Détection collision</strong> : Rectangle vs Circle
+- <strong>Système de score</strong> : Zones de sortie
+- <strong>Reset d'état</strong> : Remise à zéro contrôlée</p>
+<hr />
+<h3 id="2-snake-mecaniques-avancees">2. Snake - Mécaniques Avancées</h3>
+<pre><code class="language-kod">// === CONFIGURATION ===
+let GRID_SIZE = 20
+let GAME_WIDTH = 20   // 400 / 20 = 20 cases
+let GAME_HEIGHT = 15  // 300 / 20 = 15 cases
+
+// Serpent (simulé avec variables multiples)
+let snakeLength = 3
+let snakeX1 = 10
+let snakeY1 = 7
+let snakeX2 = 9
+let snakeY2 = 7
+let snakeX3 = 8
+let snakeY3 = 7
+
+let directionX = 1
+let directionY = 0
+
+let nextDirectionX = 1
+let nextDirectionY = 0
+
+// Nourriture
+let foodX = 15
+let foodY = 10
+
+// État du jeu
+let score = 0
+let gameOver = false
+let moveCounter = 0
+let moveDelay = 15  // Frames entre chaque mouvement
+
+function start()
+    clearScreen(&quot;#003300&quot;)
+    placeFoodRandomly()
+end
+
+function update()
+    if !gameOver
+        clearScreen(&quot;#003300&quot;)
+
+        handleInput()
+        updateSnake()
+        checkCollisions()
+
+        drawGame()
+        drawUI()
+    else
+        handleGameOver()
+    end
+end
+
+function handleInput()
+    // Prévention du retour en arrière
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; directionY != 1
+        nextDirectionX = 0
+        nextDirectionY = -1
+    end
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; directionY != -1
+        nextDirectionX = 0
+        nextDirectionY = 1
+    end
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; directionX != 1
+        nextDirectionX = -1
+        nextDirectionY = 0
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; directionX != -1
+        nextDirectionX = 1
+        nextDirectionY = 0
+    end
+end
+
+function updateSnake()
+    moveCounter = moveCounter + 1
+
+    if moveCounter &gt;= moveDelay
+        moveCounter = 0
+
+        // Appliquer la nouvelle direction
+        directionX = nextDirectionX
+        directionY = nextDirectionY
+
+        // Sauvegarder l'ancienne tête
+        let oldHeadX = snakeX1
+        let oldHeadY = snakeY1
+
+        // Nouvelle position de la tête
+        snakeX1 = snakeX1 + directionX
+        snakeY1 = snakeY1 + directionY
+
+        // Déplacer le corps (simulation de queue)
+        if snakeLength &gt;= 3
+            snakeX3 = snakeX2
+            snakeY3 = snakeY2
+        end
+        if snakeLength &gt;= 2
+            snakeX2 = oldHeadX
+            snakeY2 = oldHeadY
+        end
+    end
+end
+
+function checkCollisions()
+    // Collision avec les murs
+    if snakeX1 &lt; 0 || snakeX1 &gt;= GAME_WIDTH || snakeY1 &lt; 0 || snakeY1 &gt;= GAME_HEIGHT
+        gameOver = true
+    end
+
+    // Collision avec le corps (simplifié pour 3 segments)
+    if snakeLength &gt;= 3
+        if snakeX1 == snakeX3 &amp;&amp; snakeY1 == snakeY3
+            gameOver = true
+        end
+    end
+
+    // Collision avec la nourriture
+    if snakeX1 == foodX &amp;&amp; snakeY1 == foodY
+        score = score + 10
+        if snakeLength &lt; 3  // Limite à 3 segments pour simplicité
+            snakeLength = snakeLength + 1
+        end
+        placeFoodRandomly()
+
+        // Accélération progressive
+        if moveDelay &gt; 8
+            moveDelay = moveDelay - 1
+        end
+    end
+end
+
+function placeFoodRandomly()
+    // Placement pseudo-aléatoire basé sur le score
+    foodX = ((score * 7) + 13) % GAME_WIDTH
+    foodY = ((score * 11) + 17) % GAME_HEIGHT
+
+    // Éviter la tête du serpent
+    if foodX == snakeX1 &amp;&amp; foodY == snakeY1
+        foodX = (foodX + 3) % GAME_WIDTH
+        foodY = (foodY + 2) % GAME_HEIGHT
+    end
+end
+
+function drawGame()
+    // Grille de fond (optionnelle)
+    for x = 0 to GAME_WIDTH - 1
+        drawLine(x * GRID_SIZE, 0, x * GRID_SIZE, 300, &quot;#006600&quot;)
+    end
+    for y = 0 to GAME_HEIGHT - 1
+        drawLine(0, y * GRID_SIZE, 400, y * GRID_SIZE, &quot;#006600&quot;)
+    end
+
+    // Serpent
+    drawRect(snakeX1 * GRID_SIZE, snakeY1 * GRID_SIZE, GRID_SIZE - 2, GRID_SIZE - 2, &quot;#00FF00&quot;)  // Tête
+
+    if snakeLength &gt;= 2
+        drawRect(snakeX2 * GRID_SIZE, snakeY2 * GRID_SIZE, GRID_SIZE - 2, GRID_SIZE - 2, &quot;#00CC00&quot;)  // Corps
+    end
+    if snakeLength &gt;= 3
+        drawRect(snakeX3 * GRID_SIZE, snakeY3 * GRID_SIZE, GRID_SIZE - 2, GRID_SIZE - 2, &quot;#009900&quot;)  // Queue
+    end
+
+    // Nourriture
+    drawCircle((foodX * GRID_SIZE) + (GRID_SIZE / 2), (foodY * GRID_SIZE) + (GRID_SIZE / 2), GRID_SIZE / 3, &quot;#FF0000&quot;)
+end
+
+function drawUI()
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Longueur: &quot; + snakeLength, 150, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Vitesse: &quot; + (20 - moveDelay), 280, 20, &quot;#FFFFFF&quot;)
+end
+
+function handleGameOver()
+    clearScreen(&quot;#330000&quot;)
+
+    drawText(&quot;GAME OVER&quot;, 150, 120, &quot;#FF0000&quot;)
+    drawText(&quot;Score Final: &quot; + score, 140, 140, &quot;#FFFFFF&quot;)
+    drawText(&quot;Appuyez sur ESPACE pour rejouer&quot;, 80, 180, &quot;#CCCCCC&quot;)
+
+    if isKeyPressed(&quot;space&quot;)
+        restartGame()
+    end
+end
+
+function restartGame()
+    // Reset toutes les variables
+    snakeLength = 3
+    snakeX1 = 10
+    snakeY1 = 7
+    snakeX2 = 9
+    snakeY2 = 7
+    snakeX3 = 8
+    snakeY3 = 7
+    directionX = 1
+    directionY = 0
+    nextDirectionX = 1
+    nextDirectionY = 0
+    score = 0
+    gameOver = false
+    moveCounter = 0
+    moveDelay = 15
+    placeFoodRandomly()
+end
+</code></pre>
+<p><strong>Techniques importantes:</strong>
+- <strong>Mouvement temporisé</strong> : <code>moveCounter</code> et <code>moveDelay</code>
+- <strong>Prévention retour arrière</strong> : Vérification direction opposée
+- <strong>Simulation de queue</strong> : Variables multiples pour segments
+- <strong>Placement intelligent</strong> : Éviter les collisions lors du spawn
+- <strong>Progression de difficulté</strong> : Accélération avec le score</p>
+<hr />
+<h2 id="tutoriels-pas-a-pas">Tutoriels Pas à Pas</h2>
+<h3 id="tutoriel-1-creer-un-casse-briques">Tutoriel 1 : Créer un Casse-Briques</h3>
+<h4 id="etape-1-structure-de-base">Étape 1 : Structure de Base</h4>
+<pre><code class="language-kod">// Variables de base
+let ballX = 200
+let ballY = 250
+let ballSpeedX = 3
+let ballSpeedY = -3
+let ballRadius = 5
+
+let paddleX = 160
+let paddleY = 280
+let paddleWidth = 80
+let paddleHeight = 10
+let paddleSpeed = 6
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Dessiner les éléments
+    drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)
+    drawRect(paddleX, paddleY, paddleWidth, paddleHeight, &quot;#00FF00&quot;)
+end
+</code></pre>
+<h4 id="etape-2-mouvement-de-la-balle">Étape 2 : Mouvement de la Balle</h4>
+<pre><code class="language-kod">function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Mouvement de la balle
+    ballX = ballX + ballSpeedX
+    ballY = ballY + ballSpeedY
+
+    // Rebonds sur les murs
+    if ballX &lt;= ballRadius || ballX &gt;= 400 - ballRadius
+        ballSpeedX = ballSpeedX * -1
+    end
+    if ballY &lt;= ballRadius
+        ballSpeedY = ballSpeedY * -1
+    end
+
+    // Dessiner les éléments
+    drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)
+    drawRect(paddleX, paddleY, paddleWidth, paddleHeight, &quot;#00FF00&quot;)
+end
+</code></pre>
+<h4 id="etape-3-controle-de-la-raquette">Étape 3 : Contrôle de la Raquette</h4>
+<pre><code class="language-kod">function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôle raquette
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; paddleX &gt; 0
+        paddleX = paddleX - paddleSpeed
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; paddleX &lt; 400 - paddleWidth
+        paddleX = paddleX + paddleSpeed
+    end
+
+    // Mouvement balle + rebonds (code précédent)
+    // ...
+
+    // Collision balle-raquette
+    if ballY + ballRadius &gt;= paddleY &amp;&amp;
+       ballX &gt;= paddleX &amp;&amp;
+       ballX &lt;= paddleX + paddleWidth &amp;&amp;
+       ballSpeedY &gt; 0
+        ballSpeedY = ballSpeedY * -1
+        ballY = paddleY - ballRadius  // Éviter le collage
+    end
+
+    // Dessiner les éléments
+    drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)
+    drawRect(paddleX, paddleY, paddleWidth, paddleHeight, &quot;#00FF00&quot;)
+end
+</code></pre>
+<h4 id="etape-4-ajout-des-briques-simplifie">Étape 4 : Ajout des Briques (Simplifié)</h4>
+<pre><code class="language-kod">// Variables briques
+let brick1X = 50
+let brick1Y = 50
+let brick1Active = true
+
+let brick2X = 150
+let brick2Y = 50
+let brick2Active = true
+
+let brick3X = 250
+let brick3Y = 50
+let brick3Active = true
+
+let brickWidth = 80
+let brickHeight = 20
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Code mouvement et contrôles précédent...
+
+    // Collision avec briques
+    checkBrickCollision(1)
+    checkBrickCollision(2)
+    checkBrickCollision(3)
+
+    // Dessiner briques
+    if brick1Active
+        drawRect(brick1X, brick1Y, brickWidth, brickHeight, &quot;#FF6600&quot;)
+    end
+    if brick2Active
+        drawRect(brick2X, brick2Y, brickWidth, brickHeight, &quot;#FF6600&quot;)
+    end
+    if brick3Active
+        drawRect(brick3X, brick3Y, brickWidth, brickHeight, &quot;#FF6600&quot;)
+    end
+
+    // Dessiner balle et raquette
+    drawCircle(ballX, ballY, ballRadius, &quot;#FFFFFF&quot;)
+    drawRect(paddleX, paddleY, paddleWidth, paddleHeight, &quot;#00FF00&quot;)
+end
+
+function checkBrickCollision(brickNum)
+    let bx = 0
+    let by = 0
+    let active = false
+
+    if brickNum == 1
+        bx = brick1X
+        by = brick1Y
+        active = brick1Active
+    else if brickNum == 2
+        bx = brick2X
+        by = brick2Y
+        active = brick2Active
+    else if brickNum == 3
+        bx = brick3X
+        by = brick3Y
+        active = brick3Active
+    end
+
+    if active
+        if ballX + ballRadius &gt;= bx &amp;&amp;
+           ballX - ballRadius &lt;= bx + brickWidth &amp;&amp;
+           ballY + ballRadius &gt;= by &amp;&amp;
+           ballY - ballRadius &lt;= by + brickHeight
+
+            // Détruire la brique
+            if brickNum == 1
+                brick1Active = false
+            else if brickNum == 2
+                brick2Active = false
+            else if brickNum == 3
+                brick3Active = false
+            end
+
+            // Rebond de la balle
+            ballSpeedY = ballSpeedY * -1
+        end
+    end
+end
+</code></pre>
+<hr />
+<h3 id="tutoriel-2-systeme-de-particules">Tutoriel 2 : Système de Particules</h3>
+<h4 id="objectif-creer-un-effet-dexplosion-simple">Objectif : Créer un effet d'explosion simple</h4>
+<pre><code class="language-kod">// Système de particules (maximum 5)
+let particle1X = 0
+let particle1Y = 0
+let particle1VX = 0  // Vitesse X
+let particle1VY = 0  // Vitesse Y
+let particle1Life = 0
+
+let particle2X = 0
+let particle2Y = 0
+let particle2VX = 0
+let particle2VY = 0
+let particle2Life = 0
+
+// ... répéter pour particle3, 4, 5
+
+let explosionX = 200
+let explosionY = 150
+
+function start()
+    clearScreen(&quot;#000011&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000011&quot;)
+
+    // Déclencher explosion avec espace
+    if isKeyPressed(&quot;space&quot;)
+        createExplosion(explosionX, explosionY)
+
+        // Nouvelle position pour la prochaine
+        explosionX = (explosionX + 100) % 400
+        explosionY = (explosionY + 80) % 300
+    end
+
+    updateParticles()
+    drawParticles()
+
+    // Instructions
+    drawText(&quot;Appuyez sur ESPACE pour exploser&quot;, 80, 20, &quot;#FFFFFF&quot;)
+end
+
+function createExplosion(x, y)
+    // Particule 1 : vers le haut-gauche
+    if particle1Life &lt;= 0
+        particle1X = x
+        particle1Y = y
+        particle1VX = -3
+        particle1VY = -4
+        particle1Life = 40
+    end
+
+    // Particule 2 : vers le haut-droite
+    if particle2Life &lt;= 0
+        particle2X = x
+        particle2Y = y
+        particle2VX = 3
+        particle2VY = -4
+        particle2Life = 35
+    end
+
+    // Particule 3 : vers le bas-gauche
+    if particle3Life &lt;= 0
+        particle3X = x
+        particle3Y = y
+        particle3VX = -2
+        particle3VY = 2
+        particle3Life = 30
+    end
+
+    // Particule 4 : vers le bas-droite
+    if particle4Life &lt;= 0
+        particle4X = x
+        particle4Y = y
+        particle4VX = 2
+        particle4VY = 2
+        particle4Life = 32
+    end
+
+    // Particule 5 : vers le haut
+    if particle5Life &lt;= 0
+        particle5X = x
+        particle5Y = y
+        particle5VX = 0
+        particle5VY = -5
+        particle5Life = 45
+    end
+end
+
+function updateParticles()
+    // Particule 1
+    if particle1Life &gt; 0
+        particle1X = particle1X + particle1VX
+        particle1Y = particle1Y + particle1VY
+        particle1VY = particle1VY + 0.1  // Gravité légère
+        particle1Life = particle1Life - 1
+    end
+
+    // Particule 2
+    if particle2Life &gt; 0
+        particle2X = particle2X + particle2VX
+        particle2Y = particle2Y + particle2VY
+        particle2VY = particle2VY + 0.1
+        particle2Life = particle2Life - 1
+    end
+
+    // Répéter pour toutes les particules...
+end
+
+function drawParticles()
+    // Particule 1 - Couleur qui évolue avec la vie
+    if particle1Life &gt; 0
+        let color = &quot;#FFFF00&quot;
+        if particle1Life &lt; 20
+            color = &quot;#FF6600&quot;  // Orange quand elle vieillit
+        end
+        if particle1Life &lt; 10
+            color = &quot;#FF0000&quot;  // Rouge à la fin
+        end
+        drawCircle(particle1X, particle1Y, 3, color)
+    end
+
+    // Particule 2
+    if particle2Life &gt; 0
+        let color = &quot;#FFFF00&quot;
+        if particle2Life &lt; 15
+            color = &quot;#FF6600&quot;
+        end
+        if particle2Life &lt; 8
+            color = &quot;#FF0000&quot;
+        end
+        drawCircle(particle2X, particle2Y, 2, color)
+    end
+
+    // Répéter pour toutes les particules...
+end
+</code></pre>
+<p><strong>Techniques apprises:</strong>
+- <strong>Physique de base</strong> : Position + vitesse + gravité
+- <strong>Gestion du cycle de vie</strong> : Création, mise à jour, destruction
+- <strong>Effets visuels</strong> : Changement de couleur avec l'âge
+- <strong>Réutilisation d'objets</strong> : Vérification <code>life &lt;= 0</code> avant création</p>
+<hr />
+<h2 id="techniques-avancees">Techniques Avancées</h2>
+<h3 id="1-machine-a-etats-complexe">1. Machine à États Complexe</h3>
+<pre><code class="language-kod">let gameState = &quot;menu&quot;
+let menuSelection = 0
+let menuOptions = 3
+let stateTimer = 0
+
+// États de jeu
+let playing = false
+let paused = false
+let gameOver = false
+
+// Transitions d'état
+let fadeAlpha = 0
+let transitioning = false
+
+function update()
+    stateTimer = stateTimer + 1
+
+    if gameState == &quot;menu&quot;
+        updateMenu()
+    else if gameState == &quot;fadeIn&quot;
+        updateFadeIn()
+    else if gameState == &quot;playing&quot;
+        updatePlaying()
+    else if gameState == &quot;fadeOut&quot;
+        updateFadeOut()
+    else if gameState == &quot;gameOver&quot;
+        updateGameOver()
+    end
+end
+
+function updateMenu()
+    clearScreen(&quot;#000033&quot;)
+
+    // Navigation menu
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; stateTimer &gt; 10
+        menuSelection = menuSelection - 1
+        if menuSelection &lt; 0
+            menuSelection = menuOptions - 1
+        end
+        stateTimer = 0
+    end
+
+    if isKeyPressed(&quot;down&quot;) &amp;&amp; stateTimer &gt; 10
+        menuSelection = menuSelection + 1
+        if menuSelection &gt;= menuOptions
+            menuSelection = 0
+        end
+        stateTimer = 0
+    end
+
+    // Sélection
+    if isKeyPressed(&quot;space&quot;)
+        if menuSelection == 0  // Jouer
+            gameState = &quot;fadeIn&quot;
+            fadeAlpha = 0
+        else if menuSelection == 1  // Options
+            // Gérer options
+        else if menuSelection == 2  // Quitter
+            // Retour système
+        end
+    end
+
+    drawMenu()
+end
+
+function drawMenu()
+    drawText(&quot;MON JEU GÉNIAL&quot;, 120, 80, &quot;#FFFF00&quot;)
+
+    // Options du menu
+    let color1 = menuSelection == 0 ? &quot;#FFFFFF&quot; : &quot;#666666&quot;
+    let color2 = menuSelection == 1 ? &quot;#FFFFFF&quot; : &quot;#666666&quot;
+    let color3 = menuSelection == 2 ? &quot;#FFFFFF&quot; : &quot;#666666&quot;
+
+    drawText(&quot;&gt; Jouer&quot;, 160, 130, color1)
+    drawText(&quot;&gt; Options&quot;, 160, 150, color2)
+    drawText(&quot;&gt; Quitter&quot;, 160, 170, color3)
+
+    // Animation curseur
+    let cursorY = 130 + (menuSelection * 20)
+    let cursorX = 140 + ((stateTimer / 10) % 4)
+    drawText(&quot;&gt;&quot;, cursorX, cursorY, &quot;#00FF00&quot;)
+end
+
+function updateFadeIn()
+    fadeAlpha = fadeAlpha + 5
+    if fadeAlpha &gt;= 100
+        gameState = &quot;playing&quot;
+        initGame()
+    end
+
+    // Dessiner transition
+    drawTransition()
+end
+
+function updateFadeOut()
+    fadeAlpha = fadeAlpha - 5
+    if fadeAlpha &lt;= 0
+        gameState = &quot;menu&quot;
+        resetGame()
+    end
+
+    drawTransition()
+end
+
+function drawTransition()
+    // Simulation d'un fade avec rectangles
+    if fadeAlpha &gt; 0
+        let alpha = fadeAlpha / 100
+        for i = 0 to 10
+            if i &lt; alpha * 10
+                drawRect(0, i * 30, 400, 30, &quot;#000000&quot;)
+            end
+        end
+    end
+end
+</code></pre>
+<h3 id="2-systeme-de-collision-avance">2. Système de Collision Avancé</h3>
+<pre><code class="language-kod">// Structure d'entité simplifiée
+let entity1X = 100
+let entity1Y = 100
+let entity1W = 20
+let entity1H = 20
+let entity1Type = &quot;player&quot;
+
+let entity2X = 200
+let entity2Y = 150
+let entity2W = 30
+let entity2H = 30
+let entity2Type = &quot;enemy&quot;
+
+function checkAllCollisions()
+    // Vérifier collision entre entity1 et entity2
+    if checkEntityCollision(1, 2)
+        handleCollision(1, 2)
+    end
+
+    // Vérifier collisions avec les limites
+    checkBoundaryCollisions(1)
+    checkBoundaryCollisions(2)
+end
+
+function checkEntityCollision(id1, id2)
+    let x1, y1, w1, h1, x2, y2, w2, h2
+
+    // Récupérer données entity1
+    if id1 == 1
+        x1 = entity1X
+        y1 = entity1Y
+        w1 = entity1W
+        h1 = entity1H
+    else if id1 == 2
+        x1 = entity2X
+        y1 = entity2Y
+        w1 = entity2W
+        h1 = entity2H
+    end
+
+    // Récupérer données entity2
+    if id2 == 1
+        x2 = entity1X
+        y2 = entity1Y
+        w2 = entity1W
+        h2 = entity1H
+    else if id2 == 2
+        x2 = entity2X
+        y2 = entity2Y
+        w2 = entity2W
+        h2 = entity2H
+    end
+
+    // Test AABB
+    if x1 &lt; x2 + w2 &amp;&amp; x1 + w1 &gt; x2 &amp;&amp; y1 &lt; y2 + h2 &amp;&amp; y1 + h1 &gt; y2
+        return true
+    end
+    return false
+end
+
+function handleCollision(id1, id2)
+    // Déterminer les types
+    let type1 = &quot;&quot;
+    let type2 = &quot;&quot;
+
+    if id1 == 1
+        type1 = entity1Type
+    else if id1 == 2
+        type1 = entity2Type
+    end
+
+    if id2 == 1
+        type2 = entity1Type
+    else if id2 == 2
+        type2 = entity2Type
+    end
+
+    // Gestion selon les types
+    if (type1 == &quot;player&quot; &amp;&amp; type2 == &quot;enemy&quot;) || (type1 == &quot;enemy&quot; &amp;&amp; type2 == &quot;player&quot;)
+        handlePlayerEnemyCollision(id1, id2)
+    else if (type1 == &quot;player&quot; &amp;&amp; type2 == &quot;powerup&quot;) || (type1 == &quot;powerup&quot; &amp;&amp; type2 == &quot;player&quot;)
+        handlePlayerPowerupCollision(id1, id2)
+    end
+end
+
+function handlePlayerEnemyCollision(playerId, enemyId)
+    // Dégâts au joueur
+    playerHealth = playerHealth - 10
+
+    // Push-back effect
+    if playerId == 1
+        entity1X = entity1X - 10
+    end
+
+    // Effet visuel
+    createExplosionAt(entity1X, entity1Y)
+end
+</code></pre>
+<hr />
+<h2 id="defis-et-exercices">Défis et Exercices</h2>
+<h3 id="defi-1-pac-man-simplifie">Défi 1 : Pac-Man Simplifié</h3>
+<p><strong>Objectifs:</strong>
+- Créer un labyrinthe avec des murs
+- Joueur qui mange des points
+- Fantômes qui suivent le joueur
+- Score et vies</p>
+<p><strong>Contraintes KodLab:</strong>
+- Utiliser <code>drawRect()</code> pour les murs
+- Grille 20x15 (20 pixels par case)
+- Maximum 3 fantômes (variables séparées)</p>
+<p><strong>Structure suggérée:</strong></p>
+<pre><code class="language-kod">// Grille du labyrinthe (simulée avec des conditions)
+function isWall(gridX, gridY)
+    // Définir les murs avec des conditions
+    if gridX == 0 || gridX == 19 || gridY == 0 || gridY == 14
+        return true  // Bordures
+    end
+
+    // Murs intérieurs (exemple)
+    if gridX == 5 &amp;&amp; (gridY &gt;= 3 &amp;&amp; gridY &lt;= 10)
+        return true
+    end
+
+    return false
+end
+</code></pre>
+<h3 id="defi-2-tower-defense-minimaliste">Défi 2 : Tower Defense Minimaliste</h3>
+<p><strong>Objectifs:</strong>
+- Ennemis qui suivent un chemin
+- Tours qui tirent automatiquement
+- Ressources et construction
+- Vagues d'ennemis</p>
+<h3 id="defi-3-tetris-elementaire">Défi 3 : Tetris Élémentaire</h3>
+<p><strong>Objectifs:</strong>
+- Pièces qui tombent
+- Rotation des pièces
+- Lignes complètes qui disparaissent
+- Score progressif</p>
+<hr />
+<h3 id="exercices-pratiques">Exercices Pratiques</h3>
+<h4 id="exercice-1-ameliorer-pong">Exercice 1 : Améliorer Pong</h4>
+<ul>
+<li>Ajouter des power-ups (balle rapide, raquette plus grande)</li>
+<li>Effets de particules quand la balle touche</li>
+<li>Menus de sélection de difficulté</li>
+<li>Sauvegarde du meilleur score</li>
+</ul>
+<h4 id="exercice-2-etendre-snake">Exercice 2 : Étendre Snake</h4>
+<ul>
+<li>Obstacles sur le terrain</li>
+<li>Power-ups temporaires (vitesse, traverser murs)</li>
+<li>Plusieurs niveaux avec layouts différents</li>
+<li>Snake qui grandit plus intelligemment</li>
+</ul>
+<h4 id="exercice-3-creer-asteroids">Exercice 3 : Créer Asteroids</h4>
+<ul>
+<li>Vaisseau avec inertie</li>
+<li>Asteroids qui se divisent</li>
+<li>Soucoupes volantes ennemies</li>
+<li>Système de vies et hyperespace</li>
+</ul>
+<hr />
+<p>Cette collection d'exemples et tutoriels couvre tous les aspects de la programmation de jeux avec KodLab. Commencez par les exemples simples, puis progressez vers les projets plus complexes !</p>
+<p><strong>🚀 À vous de jouer ! Créez vos propres variations et partagez vos créations !</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

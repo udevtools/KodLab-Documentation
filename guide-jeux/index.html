@@ -1,0 +1,2291 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../langage-kod/">
+      
+      
+        <link rel="next" href="../architecture/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Guide des Jeux - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guide-de-creation-de-jeux-kodlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guide des Jeux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../langage-kod/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exemples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langage-kod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-fondamentaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Fondamentaux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Concepts Fondamentaux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-boucle-de-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      La Boucle de Jeu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-coordonnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Système de Coordonnées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#votre-premier-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Votre Premier Jeu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Votre Premier Jeu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etape-1-point-qui-bouge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 1 : Point qui Bouge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-2-controle-joueur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 2 : Contrôle Joueur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etape-3-ajouter-un-objectif" class="md-nav__link">
+    <span class="md-ellipsis">
+      Étape 3 : Ajouter un Objectif
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mecaniques-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mécaniques de Base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mécaniques de Base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-physique-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Physique Simple
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Physique Simple">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gravite-et-saut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gravité et Saut
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rebonds-et-friction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rebonds et Friction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-detection-de-collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Détection de Collisions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Détection de Collisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collision-rectangle-rectangle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Rectangle-Rectangle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collision-cercle-cercle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collision Cercle-Cercle
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gestion-des-etats" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Gestion des États
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Gestion des États">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#machine-detats-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Machine d'États Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns-de-gameplay" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patterns de Gameplay
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns de Gameplay">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-systeme-de-vies-et-sante" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Système de Vies et Santé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-systeme-de-score-et-niveaux" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Système de Score et Niveaux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-systeme-de-power-ups" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Système de Power-ups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-de-jeux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture de Jeux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture de Jeux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-modulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure Modulaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-dobjets-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion d'Objets Multiples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optimisation-et-polish" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisation et Polish
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Optimisation et Polish">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limiter-les-calculs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limiter les Calculs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimiser-laffichage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimiser l'Affichage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-effets-visuels" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Effets Visuels
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Effets Visuels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clignotement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clignotement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#animation-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      Animation Simple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-feedback-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Feedback Utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Feedback Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shake-screen-tremblement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shake Screen (Tremblement)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#particules-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Particules Simples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projets-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projets Guidés
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projets Guidés">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projet-1-casse-briques-simplifie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projet 1 : Casse-Briques Simplifié
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#projet-2-space-shooter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projet 2 : Space Shooter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conseils-de-game-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Conseils de Game Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Conseils de Game Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-commencez-simple" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Commencez Simple
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-progression-du-joueur" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Progression du Joueur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-retention-dattention" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Rétention d'Attention
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-polish-et-finition" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Polish et Finition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guide-de-creation-de-jeux-kodlab">🎯 Guide de Création de Jeux - KodLab</h1>
+<p>Ce guide vous accompagne étape par étape dans la création de jeux avec KodLab, du concept le plus simple aux mécaniques avancées.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#concepts-fondamentaux">Concepts Fondamentaux</a></li>
+<li><a href="#votre-premier-jeu">Votre Premier Jeu</a></li>
+<li><a href="#mécaniques-de-base">Mécaniques de Base</a></li>
+<li><a href="#patterns-de-gameplay">Patterns de Gameplay</a></li>
+<li><a href="#architecture-de-jeux">Architecture de Jeux</a></li>
+<li><a href="#optimisation-et-polish">Optimisation et Polish</a></li>
+<li><a href="#projets-guidés">Projets Guidés</a></li>
+</ol>
+<hr />
+<h2 id="concepts-fondamentaux">Concepts Fondamentaux</h2>
+<h3 id="la-boucle-de-jeu">La Boucle de Jeu</h3>
+<p>Tous les jeux KodLab suivent le même pattern :</p>
+<pre><code class="language-kod">function start()
+    // INITIALISATION (une seule fois)
+    // - Charger les ressources
+    // - Définir les positions initiales
+    // - Configurer les paramètres
+end
+
+function update()
+    // BOUCLE PRINCIPALE (60 fois/seconde)
+    // 1. Effacer l'écran
+    // 2. Traiter les entrées
+    // 3. Mettre à jour la logique
+    // 4. Détecter les collisions
+    // 5. Afficher les éléments
+    // 6. Afficher l'interface
+end
+</code></pre>
+<h3 id="systeme-de-coordonnees">Système de Coordonnées</h3>
+<pre><code>(0,0) ──────────────── (400,0)
+  │                        │
+  │     Canvas 400x300     │
+  │                        │
+  │                        │
+(0,300) ──────────────── (400,300)
+</code></pre>
+<ul>
+<li><strong>Origine</strong> : (0,0) en haut à gauche</li>
+<li><strong>X</strong> : augmente vers la droite</li>
+<li><strong>Y</strong> : augmente vers le bas</li>
+<li><strong>Limites</strong> : 0-400 en X, 0-300 en Y</li>
+</ul>
+<hr />
+<h2 id="votre-premier-jeu">Votre Premier Jeu</h2>
+<h3 id="etape-1-point-qui-bouge">Étape 1 : Point qui Bouge</h3>
+<pre><code class="language-kod">let x = 200
+let y = 150
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Mouvement automatique
+    x = x + 2
+    if x &gt; 400
+        x = 0
+    end
+
+    // Affichage
+    drawCircle(x, y, 10, &quot;#FF6600&quot;)
+end
+</code></pre>
+<h3 id="etape-2-controle-joueur">Étape 2 : Contrôle Joueur</h3>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 150
+let speed = 3
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôles
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - speed
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + speed
+    end
+    if isKeyPressed(&quot;up&quot;)
+        playerY = playerY - speed
+    end
+    if isKeyPressed(&quot;down&quot;)
+        playerY = playerY + speed
+    end
+
+    // Limites d'écran
+    if playerX &lt; 10
+        playerX = 10
+    end
+    if playerX &gt; 390
+        playerX = 390
+    end
+    if playerY &lt; 10
+        playerY = 10
+    end
+    if playerY &gt; 290
+        playerY = 290
+    end
+
+    // Affichage
+    drawCircle(playerX, playerY, 10, &quot;#00FF00&quot;)
+end
+</code></pre>
+<h3 id="etape-3-ajouter-un-objectif">Étape 3 : Ajouter un Objectif</h3>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 150
+let speed = 3
+
+let coinX = 100
+let coinY = 100
+let score = 0
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+    placeCoin()
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Mouvement joueur
+    movePlayer()
+
+    // Vérifier collision avec pièce
+    let distance = ((playerX - coinX) * (playerX - coinX)) + ((playerY - coinY) * (playerY - coinY))
+    if distance &lt; 400  // 20 pixels de distance
+        score = score + 10
+        placeCoin()
+    end
+
+    // Affichage
+    drawCircle(playerX, playerY, 10, &quot;#00FF00&quot;)  // Joueur
+    drawCircle(coinX, coinY, 8, &quot;#FFFF00&quot;)      // Pièce
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+end
+
+function movePlayer()
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - speed
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + speed
+    end
+    if isKeyPressed(&quot;up&quot;)
+        playerY = playerY - speed
+    end
+    if isKeyPressed(&quot;down&quot;)
+        playerY = playerY + speed
+    end
+
+    // Contraindre aux limites
+    if playerX &lt; 10
+        playerX = 10
+    end
+    if playerX &gt; 390
+        playerX = 390
+    end
+    if playerY &lt; 10
+        playerY = 10
+    end
+    if playerY &gt; 290
+        playerY = 290
+    end
+end
+
+function placeCoin()
+    coinX = 20 + ((score * 7) % 360)  // Position pseudo-aléatoire
+    coinY = 20 + ((score * 11) % 260)
+end
+</code></pre>
+<hr />
+<h2 id="mecaniques-de-base">Mécaniques de Base</h2>
+<h3 id="1-physique-simple">1. Physique Simple</h3>
+<h4 id="gravite-et-saut">Gravité et Saut</h4>
+<pre><code class="language-kod">let playerX = 200
+let playerY = 250
+let velocityY = 0
+let onGround = true
+let gravity = 0.5
+let jumpPower = -12
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôles horizontaux
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - 4
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + 4
+    end
+
+    // Saut (seulement si au sol)
+    if isKeyPressed(&quot;up&quot;) &amp;&amp; onGround
+        velocityY = jumpPower
+        onGround = false
+    end
+
+    // Appliquer la gravité
+    if !onGround
+        velocityY = velocityY + gravity
+        playerY = playerY + velocityY
+
+        // Collision avec le sol
+        if playerY &gt;= 250
+            playerY = 250
+            velocityY = 0
+            onGround = true
+        end
+    end
+
+    // Affichage
+    drawRect(playerX - 10, playerY - 20, 20, 20, &quot;#00FF00&quot;)
+    drawRect(0, 270, 400, 30, &quot;#654321&quot;)  // Sol
+end
+</code></pre>
+<h4 id="rebonds-et-friction">Rebonds et Friction</h4>
+<pre><code class="language-kod">let ballX = 200
+let ballY = 100
+let velocityX = 5
+let velocityY = 3
+let friction = 0.99
+let bounce = 0.8
+
+function update()
+    clearScreen(&quot;#001122&quot;)
+
+    // Mouvement
+    ballX = ballX + velocityX
+    ballY = ballY + velocityY
+
+    // Rebonds sur les bords
+    if ballX &lt;= 10 || ballX &gt;= 390
+        velocityX = velocityX * -bounce
+        ballX = ballX &lt;= 10 ? 10 : 390
+    end
+
+    if ballY &lt;= 10 || ballY &gt;= 290
+        velocityY = velocityY * -bounce
+        ballY = ballY &lt;= 10 ? 10 : 290
+    end
+
+    // Friction
+    velocityX = velocityX * friction
+    velocityY = velocityY * friction
+
+    // Affichage
+    drawCircle(ballX, ballY, 10, &quot;#FF6600&quot;)
+end
+</code></pre>
+<h3 id="2-detection-de-collisions">2. Détection de Collisions</h3>
+<h4 id="collision-rectangle-rectangle">Collision Rectangle-Rectangle</h4>
+<pre><code class="language-kod">function checkRectCollision(x1, y1, w1, h1, x2, y2, w2, h2)
+    if (x1 &lt; x2 + w2) &amp;&amp; (x1 + w1 &gt; x2) &amp;&amp; (y1 &lt; y2 + h2) &amp;&amp; (y1 + h1 &gt; y2)
+        // Collision détectée
+        return true
+    end
+    return false
+end
+
+// Utilisation
+let playerCollided = checkRectCollision(playerX, playerY, 20, 20, enemyX, enemyY, 30, 30)
+</code></pre>
+<h4 id="collision-cercle-cercle">Collision Cercle-Cercle</h4>
+<pre><code class="language-kod">function checkCircleCollision(x1, y1, r1, x2, y2, r2)
+    let dx = x1 - x2
+    let dy = y1 - y2
+    let distance = (dx * dx) + (dy * dy)
+    let radiusSum = (r1 + r2) * (r1 + r2)
+
+    if distance &lt; radiusSum
+        return true
+    end
+    return false
+end
+</code></pre>
+<h3 id="3-gestion-des-etats">3. Gestion des États</h3>
+<h4 id="machine-detats-simple">Machine d'États Simple</h4>
+<pre><code class="language-kod">let gameState = &quot;menu&quot;  // &quot;menu&quot;, &quot;playing&quot;, &quot;paused&quot;, &quot;gameover&quot;
+
+function update()
+    if gameState == &quot;menu&quot;
+        handleMenu()
+    else if gameState == &quot;playing&quot;
+        handleGameplay()
+    else if gameState == &quot;paused&quot;
+        handlePause()
+    else if gameState == &quot;gameover&quot;
+        handleGameOver()
+    end
+end
+
+function handleMenu()
+    clearScreen(&quot;#000033&quot;)
+    drawText(&quot;PRESS SPACE TO START&quot;, 120, 150, &quot;#FFFFFF&quot;)
+
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;playing&quot;
+        initializeGame()
+    end
+end
+
+function handleGameplay()
+    updatePlayer()
+    updateEnemies()
+    checkCollisions()
+    drawGame()
+
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;paused&quot;
+    end
+end
+
+function handlePause()
+    drawText(&quot;PAUSED - SPACE TO CONTINUE&quot;, 100, 150, &quot;#FFFF00&quot;)
+
+    if isKeyPressed(&quot;space&quot;)
+        gameState = &quot;playing&quot;
+    end
+end
+</code></pre>
+<hr />
+<h2 id="patterns-de-gameplay">Patterns de Gameplay</h2>
+<h3 id="1-systeme-de-vies-et-sante">1. Système de Vies et Santé</h3>
+<pre><code class="language-kod">let playerHealth = 100
+let maxHealth = 100
+let lives = 3
+let invulnerable = false
+let invulnerabilityTime = 0
+
+function takeDamage(damage)
+    if !invulnerable
+        playerHealth = playerHealth - damage
+        invulnerable = true
+        invulnerabilityTime = 60  // 1 seconde d'invulnérabilité
+
+        if playerHealth &lt;= 0
+            loseLife()
+        end
+    end
+end
+
+function loseLife()
+    lives = lives - 1
+    playerHealth = maxHealth
+
+    if lives &lt;= 0
+        gameState = &quot;gameover&quot;
+    else
+        respawnPlayer()
+    end
+end
+
+function updateInvulnerability()
+    if invulnerable
+        invulnerabilityTime = invulnerabilityTime - 1
+        if invulnerabilityTime &lt;= 0
+            invulnerable = false
+        end
+    end
+end
+
+function drawHealthBar()
+    // Barre de fond
+    drawRect(10, 10, 100, 10, &quot;#660000&quot;)
+
+    // Barre de santé
+    let healthWidth = (playerHealth * 100) / maxHealth
+    drawRect(10, 10, healthWidth, 10, &quot;#00FF00&quot;)
+
+    // Contour
+    drawLine(10, 10, 110, 10, &quot;#FFFFFF&quot;)
+    drawLine(10, 20, 110, 20, &quot;#FFFFFF&quot;)
+    drawLine(10, 10, 10, 20, &quot;#FFFFFF&quot;)
+    drawLine(110, 10, 110, 20, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="2-systeme-de-score-et-niveaux">2. Système de Score et Niveaux</h3>
+<pre><code class="language-kod">let score = 0
+let level = 1
+let levelScore = 0
+let scoreForNextLevel = 1000
+
+function addScore(points)
+    score = score + points
+    levelScore = levelScore + points
+
+    // Vérifier passage au niveau suivant
+    if levelScore &gt;= scoreForNextLevel
+        levelUp()
+    end
+end
+
+function levelUp()
+    level = level + 1
+    levelScore = 0
+    scoreForNextLevel = scoreForNextLevel + (level * 500)
+
+    // Augmenter la difficulté
+    enemySpeed = enemySpeed + 0.5
+    enemySpawnRate = enemySpawnRate - 2
+
+    drawLevelUpMessage()
+end
+
+function drawLevelUpMessage()
+    drawText(&quot;LEVEL UP!&quot;, 150, 150, &quot;#FFFF00&quot;)
+    drawText(&quot;Level &quot; + level, 170, 170, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="3-systeme-de-power-ups">3. Système de Power-ups</h3>
+<pre><code class="language-kod">let hasShield = false
+let shieldTime = 0
+let hasRapidFire = false
+let rapidFireTime = 0
+let hasBigBullets = false
+let bigBulletsTime = 0
+
+function collectPowerup(type)
+    if type == &quot;shield&quot;
+        hasShield = true
+        shieldTime = 600  // 10 secondes
+    else if type == &quot;rapidfire&quot;
+        hasRapidFire = true
+        rapidFireTime = 300  // 5 secondes
+    else if type == &quot;bigbullets&quot;
+        hasBigBullets = true
+        bigBulletsTime = 450  // 7.5 secondes
+    end
+end
+
+function updatePowerups()
+    // Bouclier
+    if hasShield
+        shieldTime = shieldTime - 1
+        if shieldTime &lt;= 0
+            hasShield = false
+        end
+    end
+
+    // Tir rapide
+    if hasRapidFire
+        rapidFireTime = rapidFireTime - 1
+        if rapidFireTime &lt;= 0
+            hasRapidFire = false
+        end
+    end
+
+    // Grosses balles
+    if hasBigBullets
+        bigBulletsTime = bigBulletsTime - 1
+        if bigBulletsTime &lt;= 0
+            hasBigBullets = false
+        end
+    end
+end
+
+function drawPowerupEffects()
+    // Bouclier visuel
+    if hasShield
+        drawCircle(playerX, playerY, 25, &quot;#0066FF&quot;)
+    end
+
+    // Indicateurs de temps restant
+    if hasRapidFire
+        drawText(&quot;Rapid: &quot; + (rapidFireTime / 60), 10, 40, &quot;#FF6600&quot;)
+    end
+    if hasBigBullets
+        drawText(&quot;Big: &quot; + (bigBulletsTime / 60), 10, 60, &quot;#FF00FF&quot;)
+    end
+end
+</code></pre>
+<hr />
+<h2 id="architecture-de-jeux">Architecture de Jeux</h2>
+<h3 id="structure-modulaire">Structure Modulaire</h3>
+<pre><code class="language-kod">// === VARIABLES GLOBALES ===
+let gameState = &quot;menu&quot;
+let score = 0
+let level = 1
+
+// Variables joueur
+let playerX = 200
+let playerY = 250
+let playerHealth = 100
+
+// Variables ennemis
+let enemyCount = 0
+let maxEnemies = 5
+
+// Variables interface
+let showFPS = false
+let frameCounter = 0
+
+// === FONCTION PRINCIPALE ===
+function start()
+    initializeGame()
+end
+
+function update()
+    frameCounter = frameCounter + 1
+
+    if gameState == &quot;menu&quot;
+        updateMenu()
+    else if gameState == &quot;playing&quot;
+        updateGameplay()
+    else if gameState == &quot;gameover&quot;
+        updateGameOver()
+    end
+
+    if showFPS
+        drawFPS()
+    end
+end
+
+// === GESTION DES ÉTATS ===
+function updateMenu()
+    clearScreen(&quot;#000033&quot;)
+    drawMenu()
+    handleMenuInput()
+end
+
+function updateGameplay()
+    clearScreen(&quot;#001122&quot;)
+
+    handleInput()
+    updatePlayer()
+    updateEnemies()
+    updateBullets()
+    updatePowerups()
+
+    checkCollisions()
+
+    drawBackground()
+    drawPlayer()
+    drawEnemies()
+    drawBullets()
+    drawUI()
+end
+
+function updateGameOver()
+    clearScreen(&quot;#330000&quot;)
+    drawGameOver()
+    handleGameOverInput()
+end
+
+// === GESTION DU JOUEUR ===
+function updatePlayer()
+    handlePlayerMovement()
+    handlePlayerShooting()
+    updatePlayerAnimation()
+    checkPlayerBounds()
+end
+
+function handlePlayerMovement()
+    if isKeyPressed(&quot;left&quot;)
+        playerX = playerX - 4
+    end
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + 4
+    end
+end
+
+// === GESTION DES ENNEMIS ===
+function updateEnemies()
+    spawnEnemies()
+    moveEnemies()
+    removeDeadEnemies()
+end
+
+// === RENDU ===
+function drawGame()
+    drawBackground()
+    drawPlayer()
+    drawEnemies()
+    drawBullets()
+    drawEffects()
+    drawUI()
+end
+
+function drawUI()
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Level: &quot; + level, 10, 40, &quot;#FFFFFF&quot;)
+    drawText(&quot;Health: &quot; + playerHealth, 10, 60, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="gestion-dobjets-multiples">Gestion d'Objets Multiples</h3>
+<p>Comme Kod ne supporte pas les tableaux complexes, voici une approche alternative :</p>
+<pre><code class="language-kod">// Gestion de plusieurs ennemis avec variables individuelles
+let enemy1X = 0
+let enemy1Y = 0
+let enemy1Active = false
+
+let enemy2X = 0
+let enemy2Y = 0
+let enemy2Active = false
+
+let enemy3X = 0
+let enemy3Y = 0
+let enemy3Active = false
+
+function createEnemy(slot, x, y)
+    if slot == 1
+        enemy1X = x
+        enemy1Y = y
+        enemy1Active = true
+    else if slot == 2
+        enemy2X = x
+        enemy2Y = y
+        enemy2Active = true
+    else if slot == 3
+        enemy3X = x
+        enemy3Y = y
+        enemy3Active = true
+    end
+end
+
+function updateAllEnemies()
+    if enemy1Active
+        updateEnemy(1)
+    end
+    if enemy2Active
+        updateEnemy(2)
+    end
+    if enemy3Active
+        updateEnemy(3)
+    end
+end
+
+function updateEnemy(slot)
+    if slot == 1
+        enemy1Y = enemy1Y + 2
+        if enemy1Y &gt; 300
+            enemy1Active = false
+        end
+    else if slot == 2
+        enemy2Y = enemy2Y + 2
+        if enemy2Y &gt; 300
+            enemy2Active = false
+        end
+    else if slot == 3
+        enemy3Y = enemy3Y + 2
+        if enemy3Y &gt; 300
+            enemy3Active = false
+        end
+    end
+end
+
+function drawAllEnemies()
+    if enemy1Active
+        drawRect(enemy1X, enemy1Y, 20, 20, &quot;#FF0000&quot;)
+    end
+    if enemy2Active
+        drawRect(enemy2X, enemy2Y, 20, 20, &quot;#FF0000&quot;)
+    end
+    if enemy3Active
+        drawRect(enemy3X, enemy3Y, 20, 20, &quot;#FF0000&quot;)
+    end
+end
+</code></pre>
+<hr />
+<h2 id="optimisation-et-polish">Optimisation et Polish</h2>
+<h3 id="1-performance">1. Performance</h3>
+<h4 id="limiter-les-calculs">Limiter les Calculs</h4>
+<pre><code class="language-kod">// ✅ Calculer une fois par frame
+let frameCount = 0
+let enemySpawnCounter = 0
+
+function update()
+    frameCount = frameCount + 1
+    enemySpawnCounter = enemySpawnCounter + 1
+
+    // Spawn ennemi toutes les 60 frames (1 seconde)
+    if enemySpawnCounter &gt;= 60
+        spawnEnemy()
+        enemySpawnCounter = 0
+    end
+end
+
+// ❌ Calcul répétitif évité
+// if frameCount % 60 == 0  // Calcul modulo chaque frame
+</code></pre>
+<h4 id="optimiser-laffichage">Optimiser l'Affichage</h4>
+<pre><code class="language-kod">function optimizedRender()
+    // Effacer une seule fois
+    clearScreen(&quot;#001122&quot;)
+
+    // Dessiner les éléments par couches
+    drawBackground()      // Arrière-plan
+    drawGameObjects()     // Objets de jeu
+    drawEffects()         // Effets visuels
+    drawUI()             // Interface utilisateur
+end
+</code></pre>
+<h3 id="2-effets-visuels">2. Effets Visuels</h3>
+<h4 id="clignotement">Clignotement</h4>
+<pre><code class="language-kod">let blinkCounter = 0
+
+function drawBlinkingText()
+    blinkCounter = blinkCounter + 1
+
+    if (blinkCounter / 30) % 2 &lt; 1  // Change toutes les 30 frames
+        drawText(&quot;PRESS SPACE&quot;, 150, 150, &quot;#FFFFFF&quot;)
+    end
+end
+</code></pre>
+<h4 id="animation-simple">Animation Simple</h4>
+<pre><code class="language-kod">let animationFrame = 0
+
+function updateAnimation()
+    animationFrame = animationFrame + 1
+    if animationFrame &gt; 120
+        animationFrame = 0
+    end
+end
+
+function drawAnimatedPlayer()
+    let offset = 0
+    if (animationFrame / 10) % 4 &lt; 2  // Balancement
+        offset = 2
+    else
+        offset = -2
+    end
+
+    drawRect(playerX + offset, playerY, 20, 20, &quot;#00FF00&quot;)
+end
+</code></pre>
+<h3 id="3-feedback-utilisateur">3. Feedback Utilisateur</h3>
+<h4 id="shake-screen-tremblement">Shake Screen (Tremblement)</h4>
+<pre><code class="language-kod">let screenShake = 0
+
+function addScreenShake(intensity)
+    screenShake = intensity
+end
+
+function updateScreenShake()
+    if screenShake &gt; 0
+        screenShake = screenShake - 1
+    end
+end
+
+function drawWithShake(x, y, color)
+    let shakeX = 0
+    let shakeY = 0
+
+    if screenShake &gt; 0
+        shakeX = (screenShake % 4) - 2  // Tremblement aléatoire
+        shakeY = ((screenShake * 3) % 4) - 2
+    end
+
+    drawCircle(x + shakeX, y + shakeY, 10, color)
+end
+</code></pre>
+<h4 id="particules-simples">Particules Simples</h4>
+<pre><code class="language-kod">let particles = []
+let particleCount = 0
+
+function createParticles(x, y)
+    // Créer 5 particules simples
+    for i = 1 to 5
+        if particleCount &lt; 10  // Maximum 10 particules
+            particleCount = particleCount + 1
+            // Utiliser variables globales pour chaque particule
+            // particleX[i], particleY[i], particleLife[i]
+        end
+    end
+end
+
+function updateParticles()
+    // Mettre à jour toutes les particules actives
+    // Décrémenter leur durée de vie
+    // Les supprimer quand expired
+end
+
+function drawParticles()
+    // Dessiner toutes les particules actives
+    for i = 1 to particleCount
+        // Dessiner chaque particule avec fade-out
+    end
+end
+</code></pre>
+<hr />
+<h2 id="projets-guides">Projets Guidés</h2>
+<h3 id="projet-1-casse-briques-simplifie">Projet 1 : Casse-Briques Simplifié</h3>
+<pre><code class="language-kod">// Variables de jeu
+let ballX = 200
+let ballY = 250
+let ballSpeedX = 3
+let ballSpeedY = -3
+
+let paddleX = 160
+let paddleWidth = 80
+let paddleSpeed = 6
+
+let bricks = []
+let brickRows = 5
+let brickCols = 8
+let bricksRemaining = 40
+
+let score = 0
+let lives = 3
+
+function start()
+    initializeBricks()
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    handleInput()
+    updateBall()
+    checkCollisions()
+
+    drawPaddle()
+    drawBall()
+    drawBricks()
+    drawUI()
+end
+
+function handleInput()
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; paddleX &gt; 0
+        paddleX = paddleX - paddleSpeed
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; paddleX &lt; 320
+        paddleX = paddleX + paddleSpeed
+    end
+end
+
+function updateBall()
+    ballX = ballX + ballSpeedX
+    ballY = ballY + ballSpeedY
+
+    // Rebonds sur les murs
+    if ballX &lt;= 5 || ballX &gt;= 395
+        ballSpeedX = ballSpeedX * -1
+    end
+    if ballY &lt;= 5
+        ballSpeedY = ballSpeedY * -1
+    end
+
+    // Collision avec raquette
+    if ballY &gt;= 240 &amp;&amp; ballY &lt;= 250 &amp;&amp; ballX &gt;= paddleX &amp;&amp; ballX &lt;= paddleX + paddleWidth
+        ballSpeedY = ballSpeedY * -1
+        ballY = 240  // Éviter que la balle reste collée
+    end
+
+    // Balle perdue
+    if ballY &gt; 300
+        lives = lives - 1
+        if lives &gt; 0
+            resetBall()
+        else
+            // Game Over
+        end
+    end
+end
+
+function resetBall()
+    ballX = 200
+    ballY = 250
+    ballSpeedY = -3
+end
+
+function initializeBricks()
+    // Initialiser l'état des briques (toutes présentes)
+    bricksRemaining = 40
+end
+
+function drawBricks()
+    for row = 0 to 4
+        for col = 0 to 7
+            let brickX = col * 50
+            let brickY = row * 20 + 50
+
+            // Simuler l'état de la brique (simplifié)
+            let brickIndex = row * 8 + col
+            if brickIndex &lt; bricksRemaining
+                drawRect(brickX, brickY, 45, 15, &quot;#FF6600&quot;)
+            end
+        end
+    end
+end
+
+function drawPaddle()
+    drawRect(paddleX, 250, paddleWidth, 10, &quot;#FFFFFF&quot;)
+end
+
+function drawBall()
+    drawCircle(ballX, ballY, 5, &quot;#FFFF00&quot;)
+end
+
+function drawUI()
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+    drawText(&quot;Lives: &quot; + lives, 300, 20, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<h3 id="projet-2-space-shooter">Projet 2 : Space Shooter</h3>
+<pre><code class="language-kod">// Variables joueur
+let playerX = 200
+let playerY = 250
+let playerSpeed = 5
+
+// Variables tir
+let bulletX = 0
+let bulletY = 0
+let bulletActive = false
+let bulletSpeed = 8
+let canShoot = true
+let shootCooldown = 0
+
+// Variables ennemis
+let enemy1X = 50
+let enemy1Y = 50
+let enemy1Active = true
+
+let enemy2X = 150
+let enemy2Y = 80
+let enemy2Active = true
+
+let enemy3X = 250
+let enemy3Y = 60
+let enemy3Active = true
+
+let enemySpeed = 1
+let enemyDirection = 1
+
+// Variables de jeu
+let score = 0
+let gameOver = false
+
+function start()
+    clearScreen(&quot;#000011&quot;)
+end
+
+function update()
+    if !gameOver
+        clearScreen(&quot;#000011&quot;)
+
+        handleInput()
+        updatePlayer()
+        updateBullet()
+        updateEnemies()
+        checkCollisions()
+
+        drawStars()
+        drawPlayer()
+        drawBullet()
+        drawEnemies()
+        drawUI()
+    else
+        handleGameOver()
+    end
+end
+
+function handleInput()
+    if isKeyPressed(&quot;left&quot;) &amp;&amp; playerX &gt; 20
+        playerX = playerX - playerSpeed
+    end
+    if isKeyPressed(&quot;right&quot;) &amp;&amp; playerX &lt; 380
+        playerX = playerX + playerSpeed
+    end
+    if isKeyPressed(&quot;space&quot;) &amp;&amp; canShoot &amp;&amp; !bulletActive
+        shoot()
+    end
+end
+
+function shoot()
+    bulletX = playerX
+    bulletY = playerY - 10
+    bulletActive = true
+    canShoot = false
+    shootCooldown = 15  // Délai entre les tirs
+end
+
+function updatePlayer()
+    // Gestion du cooldown de tir
+    if shootCooldown &gt; 0
+        shootCooldown = shootCooldown - 1
+    end
+    if shootCooldown &lt;= 0
+        canShoot = true
+    end
+end
+
+function updateBullet()
+    if bulletActive
+        bulletY = bulletY - bulletSpeed
+        if bulletY &lt; 0
+            bulletActive = false
+        end
+    end
+end
+
+function updateEnemies()
+    // Mouvement en formation
+    if enemy1Active
+        enemy1X = enemy1X + (enemyDirection * enemySpeed)
+    end
+    if enemy2Active
+        enemy2X = enemy2X + (enemyDirection * enemySpeed)
+    end
+    if enemy3Active
+        enemy3X = enemy3X + (enemyDirection * enemySpeed)
+    end
+
+    // Changement de direction
+    if enemy1X &gt;= 350 || enemy2X &gt;= 350 || enemy3X &gt;= 350 || enemy1X &lt;= 50 || enemy2X &lt;= 50 || enemy3X &lt;= 50
+        enemyDirection = enemyDirection * -1
+
+        if enemy1Active
+            enemy1Y = enemy1Y + 20
+        end
+        if enemy2Active
+            enemy2Y = enemy2Y + 20
+        end
+        if enemy3Active
+            enemy3Y = enemy3Y + 20
+        end
+    end
+
+    // Vérifier si les ennemis atteignent le joueur
+    if (enemy1Active &amp;&amp; enemy1Y &gt; 220) || (enemy2Active &amp;&amp; enemy2Y &gt; 220) || (enemy3Active &amp;&amp; enemy3Y &gt; 220)
+        gameOver = true
+    end
+end
+
+function checkCollisions()
+    if bulletActive
+        // Collision avec ennemi 1
+        if enemy1Active &amp;&amp; bulletX &gt; enemy1X - 15 &amp;&amp; bulletX &lt; enemy1X + 15 &amp;&amp; bulletY &gt; enemy1Y - 10 &amp;&amp; bulletY &lt; enemy1Y + 10
+            enemy1Active = false
+            bulletActive = false
+            score = score + 100
+        end
+
+        // Collision avec ennemi 2
+        if enemy2Active &amp;&amp; bulletX &gt; enemy2X - 15 &amp;&amp; bulletX &lt; enemy2X + 15 &amp;&amp; bulletY &gt; enemy2Y - 10 &amp;&amp; bulletY &lt; enemy2Y + 10
+            enemy2Active = false
+            bulletActive = false
+            score = score + 100
+        end
+
+        // Collision avec ennemi 3
+        if enemy3Active &amp;&amp; bulletX &gt; enemy3X - 15 &amp;&amp; bulletX &lt; enemy3X + 15 &amp;&amp; bulletY &gt; enemy3Y - 10 &amp;&amp; bulletY &lt; enemy3Y + 10
+            enemy3Active = false
+            bulletActive = false
+            score = score + 100
+        end
+    end
+
+    // Vérifier victoire
+    if !enemy1Active &amp;&amp; !enemy2Active &amp;&amp; !enemy3Active
+        drawText(&quot;VICTORY!&quot;, 150, 150, &quot;#00FF00&quot;)
+    end
+end
+
+function drawStars()
+    // Étoiles fixes simples
+    drawPixel(50, 30, &quot;#FFFFFF&quot;)
+    drawPixel(150, 80, &quot;#FFFFFF&quot;)
+    drawPixel(250, 45, &quot;#FFFFFF&quot;)
+    drawPixel(350, 90, &quot;#FFFFFF&quot;)
+    drawPixel(80, 120, &quot;#FFFFFF&quot;)
+    drawPixel(300, 160, &quot;#FFFFFF&quot;)
+end
+
+function drawPlayer()
+    // Vaisseau triangulaire
+    drawRect(playerX - 2, playerY + 5, 4, 15, &quot;#00FF00&quot;)
+    drawRect(playerX - 8, playerY + 10, 16, 8, &quot;#00FF00&quot;)
+end
+
+function drawBullet()
+    if bulletActive
+        drawRect(bulletX - 1, bulletY, 2, 8, &quot;#FFFF00&quot;)
+    end
+end
+
+function drawEnemies()
+    if enemy1Active
+        drawRect(enemy1X - 10, enemy1Y - 5, 20, 10, &quot;#FF0000&quot;)
+    end
+    if enemy2Active
+        drawRect(enemy2X - 10, enemy2Y - 5, 20, 10, &quot;#FF0000&quot;)
+    end
+    if enemy3Active
+        drawRect(enemy3X - 10, enemy3Y - 5, 20, 10, &quot;#FF0000&quot;)
+    end
+end
+
+function drawUI()
+    drawText(&quot;Score: &quot; + score, 10, 20, &quot;#FFFFFF&quot;)
+    if !canShoot
+        drawText(&quot;Reloading...&quot;, 300, 280, &quot;#FFFF00&quot;)
+    end
+end
+
+function handleGameOver()
+    clearScreen(&quot;#330000&quot;)
+    drawText(&quot;GAME OVER&quot;, 140, 120, &quot;#FF0000&quot;)
+    drawText(&quot;Score: &quot; + score, 160, 140, &quot;#FFFFFF&quot;)
+    drawText(&quot;Press SPACE to restart&quot;, 110, 180, &quot;#FFFF00&quot;)
+
+    if isKeyPressed(&quot;space&quot;)
+        restartGame()
+    end
+end
+
+function restartGame()
+    // Reset toutes les variables
+    playerX = 200
+    enemy1X = 50
+    enemy1Y = 50
+    enemy1Active = true
+    enemy2X = 150
+    enemy2Y = 80
+    enemy2Active = true
+    enemy3X = 250
+    enemy3Y = 60
+    enemy3Active = true
+    score = 0
+    gameOver = false
+    bulletActive = false
+end
+</code></pre>
+<hr />
+<h2 id="conseils-de-game-design">🎯 Conseils de Game Design</h2>
+<h3 id="1-commencez-simple">1. Commencez Simple</h3>
+<ul>
+<li><strong>Une mécanique</strong> à la fois</li>
+<li><strong>Prototype rapide</strong> avant de polir</li>
+<li><strong>Testez fréquemment</strong> vos idées</li>
+</ul>
+<h3 id="2-progression-du-joueur">2. Progression du Joueur</h3>
+<ul>
+<li><strong>Courbe d'apprentissage</strong> douce</li>
+<li><strong>Défis croissants</strong> mais justes</li>
+<li><strong>Feedback immédiat</strong> sur les actions</li>
+</ul>
+<h3 id="3-retention-dattention">3. Rétention d'Attention</h3>
+<ul>
+<li><strong>Objectifs clairs</strong> : que doit faire le joueur ?</li>
+<li><strong>Récompenses régulières</strong> : points, power-ups, niveaux</li>
+<li><strong>Variété</strong> : éviter la répétition monotone</li>
+</ul>
+<h3 id="4-polish-et-finition">4. Polish et Finition</h3>
+<ul>
+<li><strong>Sons</strong> : même simples, ils ajoutent beaucoup</li>
+<li><strong>Animations</strong> : fluidité et vie</li>
+<li><strong>Interface</strong> : claire et informative</li>
+<li><strong>Equilibrage</strong> : ni trop facile, ni trop dur</li>
+</ul>
+<hr />
+<p><strong>Prêt à créer vos propres jeux ? Explorez les <a href="../exemples/">Exemples Complets</a> pour plus d'inspiration ! 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

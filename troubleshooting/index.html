@@ -1,0 +1,1593 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../exemples/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Dépannage - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#depannage-et-faq-kodlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dépannage
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../langage-kod/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-jeux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../architecture/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exemples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langage-kod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-jeux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemes-de-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problèmes de Compilation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problèmes de Compilation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fonction-drawcircl-inconnue" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Fonction 'drawCircl' inconnue"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreur-ligne-x-end-attendu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Erreur ligne X : 'end' attendu"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-speed-non-declaree" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Variable 'speed' non déclarée"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fonction-start-ou-update-manquante" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "Fonction 'start' ou 'update' manquante"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erreurs-dexecution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erreurs d'Exécution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Erreurs d&#39;Exécution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#referenceerror-xxx-is-not-defined" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "ReferenceError: xxx is not defined"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeerror-cannot-read-property" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ "TypeError: Cannot read property"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-jeu-se-lance-puis-sarrete-immediatement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Le jeu se lance puis s'arrête immédiatement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problemes-daffichage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problèmes d'Affichage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Problèmes d&#39;Affichage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecran-noir-rien-ne-saffiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Écran noir / Rien ne s'affiche
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objets-qui-laissent-des-trainees" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Objets qui laissent des traînées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#texte-ou-objets-clignotent" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Texte ou objets clignotent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controles-et-entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contrôles et Entrées
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contrôles et Entrées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-touches-ne-repondent-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Les touches ne répondent pas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mouvement-trop-rapide-ou-saccade" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Mouvement trop rapide ou saccadé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impossible-darreter-le-mouvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Impossible d'arrêter le mouvement
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jeu-lent-saccade" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Jeu lent / saccadé
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#memoire-qui-augmente-fuite-memoire" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Mémoire qui augmente (fuite mémoire)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#faq-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      FAQ Générale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ Générale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pourquoi-mon-jeu-ne-se-sauvegarde-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Pourquoi mon jeu ne se sauvegarde pas ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#puis-je-utiliser-des-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Puis-je utiliser des images ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-sons-ne-fonctionnent-pas" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Les sons ne fonctionnent pas ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-faire-des-niveaux-multiples" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Comment faire des niveaux multiples ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peut-on-jouer-a-plusieurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Peut-on jouer à plusieurs ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-deboguer-mon-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Comment déboguer mon code ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreur-uncaught-syntaxerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Erreur "Uncaught SyntaxError" ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#le-jeu-fonctionne-sur-chrome-mais-pas-sur-firefox" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Le jeu fonctionne sur Chrome mais pas sur Firefox ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comment-optimiser-mon-jeu" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❓ Comment optimiser mon jeu ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cas-durgence" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚨 Cas d'Urgence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Cas d&#39;Urgence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jeu-completement-casse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jeu complètement cassé ?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editeur-ne-repond-plus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Éditeur ne répond plus ?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="depannage-et-faq-kodlab">🛠️ Dépannage et FAQ - KodLab</h1>
+<p>Guide de résolution des problèmes les plus fréquents avec KodLab.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#problèmes-de-compilation">Problèmes de Compilation</a></li>
+<li><a href="#erreurs-dexécution">Erreurs d'Exécution</a></li>
+<li><a href="#problèmes-daffichage">Problèmes d'Affichage</a></li>
+<li><a href="#contrôles-et-entrées">Contrôles et Entrées</a></li>
+<li><a href="#performance">Performance</a></li>
+<li><a href="#faq-générale">FAQ Générale</a></li>
+</ol>
+<hr />
+<h2 id="problemes-de-compilation">Problèmes de Compilation</h2>
+<h3 id="fonction-drawcircl-inconnue">❌ "Fonction 'drawCircl' inconnue"</h3>
+<p><strong>Cause :</strong> Faute de frappe dans le nom de fonction.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Incorrect
+drawCircl(100, 100, 20, &quot;#FF0000&quot;)
+
+// ✅ Correct
+drawCircle(100, 100, 20, &quot;#FF0000&quot;)
+</code></pre>
+<p><strong>Fonctions API correctes :</strong>
+- <code>clearScreen()</code>
+- <code>drawRect()</code>
+- <code>drawCircle()</code>
+- <code>drawLine()</code>
+- <code>drawPixel()</code>
+- <code>drawText()</code>
+- <code>isKeyPressed()</code>
+- <code>playSound()</code></p>
+<hr />
+<h3 id="erreur-ligne-x-end-attendu">❌ "Erreur ligne X : 'end' attendu"</h3>
+<p><strong>Cause :</strong> Bloc de code non fermé.</p>
+<p><strong>Solutions :</strong></p>
+<pre><code class="language-kod">// ❌ Manque un 'end'
+function update()
+    if isKeyPressed(&quot;space&quot;)
+        drawText(&quot;Hello&quot;, 100, 100, &quot;#FFFFFF&quot;)
+    // ❌ Manque 'end' pour le if
+    drawCircle(200, 150, 20, &quot;#FF0000&quot;)
+end
+
+// ✅ Correct
+function update()
+    if isKeyPressed(&quot;space&quot;)
+        drawText(&quot;Hello&quot;, 100, 100, &quot;#FFFFFF&quot;)
+    end  // ✅ Fermeture du if
+    drawCircle(200, 150, 20, &quot;#FF0000&quot;)
+end
+</code></pre>
+<p><strong>Vérification systématique :</strong>
+- Chaque <code>if</code> doit avoir son <code>end</code>
+- Chaque <code>function</code> doit avoir son <code>end</code>
+- Chaque <code>for</code> doit avoir son <code>end</code>
+- Chaque <code>while</code> doit avoir son <code>end</code></p>
+<hr />
+<h3 id="variable-speed-non-declaree">❌ "Variable 'speed' non déclarée"</h3>
+<p><strong>Cause :</strong> Variable utilisée sans déclaration préalable.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Variable non déclarée
+function update()
+    playerX = playerX + speed  // ❌ 'speed' n'existe pas
+end
+
+// ✅ Déclarer les variables au début
+let speed = 5
+let playerX = 200
+
+function update()
+    playerX = playerX + speed  // ✅ 'speed' est déclarée
+end
+</code></pre>
+<hr />
+<h3 id="fonction-start-ou-update-manquante">❌ "Fonction 'start' ou 'update' manquante"</h3>
+<p><strong>Cause :</strong> Les fonctions obligatoires ne sont pas définies.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ✅ Toujours inclure ces deux fonctions
+function start()
+    // Initialisation (même vide)
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    // Boucle principale (obligatoire)
+    clearScreen(&quot;#000033&quot;)
+    drawText(&quot;Hello World&quot;, 100, 100, &quot;#FFFFFF&quot;)
+end
+</code></pre>
+<hr />
+<h2 id="erreurs-dexecution">Erreurs d'Exécution</h2>
+<h3 id="referenceerror-xxx-is-not-defined">❌ "ReferenceError: xxx is not defined"</h3>
+<p><strong>Cause :</strong> Accès à une variable ou fonction inexistante à l'exécution.</p>
+<p><strong>Diagnostic :</strong>
+1. Vérifiez l'orthographe exacte
+2. Assurez-vous que la variable est déclarée avant utilisation
+3. Contrôlez la portée des variables</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Erreur commune
+let playeX = 200  // ❌ Faute de frappe
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+    playerX = playerX + 5  // ❌ Référence 'playerX' inexistante
+end
+
+// ✅ Correction
+let playerX = 200  // ✅ Nom correct
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+    playerX = playerX + 5  // ✅ Variable existe
+end
+</code></pre>
+<hr />
+<h3 id="typeerror-cannot-read-property">❌ "TypeError: Cannot read property"</h3>
+<p><strong>Cause :</strong> Tentative d'accès à une propriété d'un objet <code>undefined</code> ou <code>null</code>.</p>
+<p><strong>Solutions courantes :</strong></p>
+<pre><code class="language-kod">// ❌ Division par zéro
+let result = score / 0  // Peut causer des erreurs
+
+// ✅ Vérification
+if divisor != 0
+    result = score / divisor
+else
+    result = 0
+end
+
+// ❌ Calculs avec undefined
+let distance = (playerX - enemyX) * (playerX - enemyX)  // Si enemyX pas initialisé
+
+// ✅ Initialisation correcte
+let enemyX = 100  // Toujours initialiser
+let enemyY = 50
+</code></pre>
+<hr />
+<h3 id="le-jeu-se-lance-puis-sarrete-immediatement">❌ Le jeu se lance puis s'arrête immédiatement</h3>
+<p><strong>Causes fréquentes :</strong></p>
+<ol>
+<li><strong>Boucle infinie dans update() :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Boucle infinie
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    while true  // ❌ Bloque l'exécution
+        drawCircle(100, 100, 10, &quot;#FF0000&quot;)
+    end
+end
+
+// ✅ Pas de boucles infinies dans update()
+function update()
+    clearScreen(&quot;#000033&quot;)
+    drawCircle(100, 100, 10, &quot;#FF0000&quot;)
+end
+</code></pre>
+<ol>
+<li><strong>Erreur dans start() :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Erreur dans start
+function start()
+    playerX = &quot;abc&quot;  // ❌ Assigner texte à variable numérique
+    clearScreen(playerX)  // ❌ Couleur invalide
+end
+
+// ✅ Types cohérents
+function start()
+    playerX = 200  // ✅ Nombre pour position
+    clearScreen(&quot;#000033&quot;)  // ✅ Couleur valide
+end
+</code></pre>
+<hr />
+<h2 id="problemes-daffichage">Problèmes d'Affichage</h2>
+<h3 id="ecran-noir-rien-ne-saffiche">❌ Écran noir / Rien ne s'affiche</h3>
+<p><strong>Diagnostics :</strong></p>
+<ol>
+<li><strong>Pas de clearScreen() :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Pas d'effacement
+function update()
+    drawCircle(100, 100, 20, &quot;#FF0000&quot;)  // Ne s'affiche pas bien
+end
+
+// ✅ Toujours effacer d'abord
+function update()
+    clearScreen(&quot;#000033&quot;)  // ✅ Effacement obligatoire
+    drawCircle(100, 100, 20, &quot;#FF0000&quot;)
+end
+</code></pre>
+<ol>
+<li><strong>Objets hors écran :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Position hors limites
+let x = -100  // ❌ Négatif = hors écran
+let y = 500   // ❌ &gt; 300 = hors écran
+
+// ✅ Positions valides
+let x = 200   // ✅ Entre 0 et 400
+let y = 150   // ✅ Entre 0 et 300
+</code></pre>
+<ol>
+<li><strong>Couleurs invisibles :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Couleurs invisibles
+clearScreen(&quot;#000000&quot;)  // Fond noir
+drawCircle(100, 100, 20, &quot;#000000&quot;)  // ❌ Cercle noir sur fond noir
+
+// ✅ Contraste visible
+clearScreen(&quot;#000000&quot;)  // Fond noir
+drawCircle(100, 100, 20, &quot;#FFFFFF&quot;)  // ✅ Cercle blanc visible
+</code></pre>
+<hr />
+<h3 id="objets-qui-laissent-des-trainees">❌ Objets qui laissent des traînées</h3>
+<p><strong>Cause :</strong> <code>clearScreen()</code> manquant ou mal placé.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Pas d'effacement = traînées
+let x = 0
+function update()
+    x = x + 5
+    drawCircle(x, 150, 20, &quot;#FF0000&quot;)  // ❌ Laisse des traces
+end
+
+// ✅ Effacer à chaque frame
+let x = 0
+function update()
+    clearScreen(&quot;#000033&quot;)  // ✅ Efface les traces
+    x = x + 5
+    drawCircle(x, 150, 20, &quot;#FF0000&quot;)
+end
+</code></pre>
+<hr />
+<h3 id="texte-ou-objets-clignotent">❌ Texte ou objets clignotent</h3>
+<p><strong>Cause :</strong> Multiples <code>clearScreen()</code> ou conditions d'affichage inconsistantes.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Multiple effacements
+function update()
+    clearScreen(&quot;#000033&quot;)
+    drawPlayer()
+    clearScreen(&quot;#000033&quot;)  // ❌ Efface le joueur !
+    drawEnemies()
+end
+
+// ✅ Un seul clearScreen au début
+function update()
+    clearScreen(&quot;#000033&quot;)  // ✅ Une seule fois
+    drawPlayer()
+    drawEnemies()
+end
+</code></pre>
+<hr />
+<h2 id="controles-et-entrees">Contrôles et Entrées</h2>
+<h3 id="les-touches-ne-repondent-pas">❌ Les touches ne répondent pas</h3>
+<p><strong>Diagnostics :</strong></p>
+<ol>
+<li><strong>Orthographe des touches :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Noms incorrects
+if isKeyPressed(&quot;Up&quot;)      // ❌ Majuscule
+if isKeyPressed(&quot;SPACE&quot;)   // ❌ Majuscules
+if isKeyPressed(&quot;Left&quot;)    // ❌ Majuscule
+
+// ✅ Noms corrects
+if isKeyPressed(&quot;up&quot;)      // ✅ Minuscules
+if isKeyPressed(&quot;space&quot;)   // ✅ Minuscules
+if isKeyPressed(&quot;left&quot;)    // ✅ Minuscules
+</code></pre>
+<ol>
+<li><strong>Focus du canvas :</strong></li>
+<li>Cliquez sur le canvas de jeu avant d'utiliser le clavier</li>
+<li>
+<p>Le navigateur doit avoir le focus sur la page</p>
+</li>
+<li>
+<p><strong>Touches supportées uniquement :</strong></p>
+</li>
+</ol>
+<pre><code class="language-kod">// ✅ Touches disponibles
+&quot;up&quot;, &quot;down&quot;, &quot;left&quot;, &quot;right&quot;  // Flèches + WASD
+&quot;space&quot;                        // Barre d'espace
+
+// ❌ Touches non supportées
+&quot;enter&quot;, &quot;ctrl&quot;, &quot;shift&quot;, &quot;a&quot;, &quot;b&quot;, etc.
+</code></pre>
+<hr />
+<h3 id="mouvement-trop-rapide-ou-saccade">❌ Mouvement trop rapide ou saccadé</h3>
+<p><strong>Cause :</strong> Vitesse inadaptée au framerate (60 FPS).</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Mouvement trop rapide
+let speed = 50  // ❌ 50 pixels par frame = très rapide
+
+if isKeyPressed(&quot;right&quot;)
+    playerX = playerX + speed
+end
+
+// ✅ Vitesse adaptée
+let speed = 3   // ✅ 3 pixels par frame = fluide
+
+if isKeyPressed(&quot;right&quot;)
+    playerX = playerX + speed
+end
+</code></pre>
+<hr />
+<h3 id="impossible-darreter-le-mouvement">❌ Impossible d'arrêter le mouvement</h3>
+<p><strong>Cause :</strong> Logique de mouvement continue même sans appui.</p>
+<p><strong>Solution :</strong></p>
+<pre><code class="language-kod">// ❌ Mouvement automatique
+let velocity = 5
+function update()
+    playerX = playerX + velocity  // ❌ Toujours en mouvement
+end
+
+// ✅ Mouvement conditionnel
+function update()
+    if isKeyPressed(&quot;right&quot;)
+        playerX = playerX + 5
+    end
+    // ✅ Pas de mouvement si pas d'appui
+end
+</code></pre>
+<hr />
+<h2 id="performance">Performance</h2>
+<h3 id="jeu-lent-saccade">❌ Jeu lent / saccadé</h3>
+<p><strong>Causes et solutions :</strong></p>
+<ol>
+<li><strong>Trop de calculs dans update() :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Calculs lourds répétés
+function update()
+    for i = 1 to 1000  // ❌ Boucle trop lourde
+        for j = 1 to 1000
+            drawPixel(i, j, &quot;#FF0000&quot;)
+        end
+    end
+end
+
+// ✅ Calculs optimisés
+function update()
+    clearScreen(&quot;#000033&quot;)
+    for i = 1 to 50  // ✅ Boucle raisonnable
+        drawCircle(i * 8, 150, 3, &quot;#FF0000&quot;)
+    end
+end
+</code></pre>
+<ol>
+<li><strong>Trop d'éléments graphiques :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Trop d'objets dessinés
+function update()
+    clearScreen(&quot;#000033&quot;)
+    for i = 1 to 500  // ❌ 500 cercles par frame
+        drawCircle(i, 100, 5, &quot;#FF0000&quot;)
+    end
+end
+
+// ✅ Nombre raisonnable
+function update()
+    clearScreen(&quot;#000033&quot;)
+    for i = 1 to 20   // ✅ 20 cercles suffisent
+        drawCircle(i * 20, 100, 5, &quot;#FF0000&quot;)
+    end
+end
+</code></pre>
+<hr />
+<h3 id="memoire-qui-augmente-fuite-memoire">❌ Mémoire qui augmente (fuite mémoire)</h3>
+<p><strong>Cause :</strong> Variables qui s'accumulent sans nettoyage.</p>
+<p><strong>Prévention :</strong></p>
+<pre><code class="language-kod">// ✅ Réutiliser les variables
+let tempX = 0
+let tempY = 0
+
+function update()
+    // Réutiliser tempX, tempY au lieu de créer nouvelles variables
+    tempX = playerX + 10
+    tempY = playerY + 5
+    drawCircle(tempX, tempY, 10, &quot;#FF0000&quot;)
+end
+</code></pre>
+<hr />
+<h2 id="faq-generale">FAQ Générale</h2>
+<h3 id="pourquoi-mon-jeu-ne-se-sauvegarde-pas">❓ Pourquoi mon jeu ne se sauvegarde pas ?</h3>
+<p><strong>Réponse :</strong> KodLab fonctionne dans le navigateur sans sauvegarde automatique.</p>
+<p><strong>Solutions :</strong>
+- <strong>Ctrl+S</strong> dans l'éditeur (sauvegarde temporaire navigateur)
+- <strong>Copier-coller</strong> le code dans un fichier <code>.kod</code> 
+- <strong>Bookmarks</strong> pour sauvegarder l'état de l'éditeur</p>
+<hr />
+<h3 id="puis-je-utiliser-des-images">❓ Puis-je utiliser des images ?</h3>
+<p><strong>Réponse :</strong> Non, KodLab ne supporte que les formes géométriques et le texte.</p>
+<p><strong>Alternatives créatives :</strong></p>
+<pre><code class="language-kod">// Créer des sprites avec des rectangles
+function drawPlayer()
+    drawRect(playerX, playerY, 20, 20, &quot;#00FF00&quot;)     // Corps
+    drawRect(playerX + 5, playerY - 5, 10, 5, &quot;#FFDDAA&quot;)  // Tête
+    drawCircle(playerX + 7, playerY - 3, 1, &quot;#000000&quot;)     // Œil gauche
+    drawCircle(playerX + 13, playerY - 3, 1, &quot;#000000&quot;)    // Œil droit
+end
+</code></pre>
+<hr />
+<h3 id="les-sons-ne-fonctionnent-pas">❓ Les sons ne fonctionnent pas ?</h3>
+<p><strong>Causes possibles :</strong></p>
+<ol>
+<li><strong>Navigateur non compatible :</strong></li>
+<li>Utilisez Chrome, Firefox, Safari ou Edge récents</li>
+<li>
+<p>Vérifiez que Web Audio API est supporté</p>
+</li>
+<li>
+<p><strong>Interaction utilisateur manquante :</strong></p>
+</li>
+<li>L'audio nécessite un clic utilisateur pour s'initialiser</li>
+<li>
+<p>Cliquez une fois sur la page avant de lancer le jeu</p>
+</li>
+<li>
+<p><strong>Volume système :</strong></p>
+</li>
+<li>Vérifiez que le volume n'est pas coupé</li>
+<li>
+<p>Testez avec d'autres sites audio</p>
+</li>
+<li>
+<p><strong>Note invalide :</strong></p>
+</li>
+</ol>
+<pre><code class="language-kod">// ❌ Notes incorrectes
+playSound(&quot;do#&quot;, 0.2)    // Dièses non supportés
+playSound(&quot;DO&quot;, 0.2)     // Majuscules non supportées
+playSound(&quot;c&quot;, 0.2)      // Notation anglaise non supportée
+
+// ✅ Notes correctes
+playSound(&quot;do&quot;, 0.2)     // Notes françaises minuscules
+playSound(&quot;re&quot;, 0.2)
+playSound(&quot;mi&quot;, 0.2)
+</code></pre>
+<p><strong>Solutions :</strong>
+- Testez l'exemple "Piano Virtuel" pour vérifier l'audio
+- Redémarrez le navigateur si nécessaire
+- Utilisez des durées entre 0.1 et 2.0 secondes</p>
+<hr />
+<h3 id="comment-faire-des-niveaux-multiples">❓ Comment faire des niveaux multiples ?</h3>
+<p><strong>Réponse :</strong> Utiliser des variables d'état et des conditions.</p>
+<p><strong>Exemple :</strong></p>
+<pre><code class="language-kod">let currentLevel = 1
+let levelCompleted = false
+
+function update()
+    if currentLevel == 1
+        updateLevel1()
+    else if currentLevel == 2
+        updateLevel2()
+    else if currentLevel == 3
+        updateLevel3()
+    end
+
+    if levelCompleted
+        currentLevel = currentLevel + 1
+        levelCompleted = false
+        initializeLevel()
+    end
+end
+</code></pre>
+<hr />
+<h3 id="peut-on-jouer-a-plusieurs">❓ Peut-on jouer à plusieurs ?</h3>
+<p><strong>Réponse :</strong> Pas de multijoueur réseau, mais possible en local.</p>
+<p><strong>Exemple 2 joueurs :</strong></p>
+<pre><code class="language-kod">// Joueur 1 : Flèches
+if isKeyPressed(&quot;up&quot;)
+    player1Y = player1Y - speed
+end
+
+// Joueur 2 : WASD (si supporté par le navigateur)
+// Sinon, utiliser des touches alternées
+if isKeyPressed(&quot;space&quot;)  // Action joueur 2
+    player2Action()
+end
+</code></pre>
+<hr />
+<h3 id="comment-deboguer-mon-code">❓ Comment déboguer mon code ?</h3>
+<p><strong>Techniques de debug :</strong></p>
+<ol>
+<li><strong>Affichage des variables :</strong></li>
+</ol>
+<pre><code class="language-kod">function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Debug : afficher les valeurs
+    drawText(&quot;PlayerX: &quot; + playerX, 10, 20, &quot;#FFFF00&quot;)
+    drawText(&quot;PlayerY: &quot; + playerY, 10, 40, &quot;#FFFF00&quot;)
+    drawText(&quot;Speed: &quot; + speed, 10, 60, &quot;#FFFF00&quot;)
+end
+</code></pre>
+<ol>
+<li><strong>Messages de progression :</strong></li>
+</ol>
+<pre><code class="language-kod">function updatePlayer()
+    drawText(&quot;Dans updatePlayer&quot;, 10, 100, &quot;#00FF00&quot;)  // Debug
+
+    if isKeyPressed(&quot;left&quot;)
+        drawText(&quot;Touche gauche pressée&quot;, 10, 120, &quot;#00FF00&quot;)
+        playerX = playerX - speed
+    end
+end
+</code></pre>
+<ol>
+<li><strong>Test par étapes :</strong></li>
+<li>Commenter des portions de code</li>
+<li>Tester une fonction à la fois</li>
+<li>Vérifier les valeurs limites</li>
+</ol>
+<hr />
+<h3 id="erreur-uncaught-syntaxerror">❓ Erreur "Uncaught SyntaxError" ?</h3>
+<p><strong>Cause :</strong> Erreur de compilation non détectée.</p>
+<p><strong>Solution :</strong>
+1. Vérifiez tous les <code>end</code>
+2. Contrôlez les guillemets : <code>"</code> et <code>'</code>
+3. Vérifiez les parenthèses <code>()</code>
+4. Rechargez la page et re-compilez</p>
+<hr />
+<h3 id="le-jeu-fonctionne-sur-chrome-mais-pas-sur-firefox">❓ Le jeu fonctionne sur Chrome mais pas sur Firefox ?</h3>
+<p><strong>Réponse :</strong> Problème de compatibilité navigateur.</p>
+<p><strong>Solutions :</strong>
+- Utilisez <strong>Chrome</strong> ou <strong>Edge</strong> (recommandés)
+- Vérifiez que JavaScript est activé
+- Désactivez les bloqueurs de publicité sur la page
+- Testez en mode navigation privée</p>
+<hr />
+<h3 id="comment-optimiser-mon-jeu">❓ Comment optimiser mon jeu ?</h3>
+<p><strong>Conseils performance :</strong></p>
+<ol>
+<li><strong>Limiter les calculs :</strong></li>
+</ol>
+<pre><code class="language-kod">// ✅ Calculer une fois, utiliser plusieurs fois
+let distance = calculateDistance(player, enemy)
+if distance &lt; 50
+    handleCollision()
+end
+if distance &lt; 100
+    playWarningSound()
+end
+</code></pre>
+<ol>
+<li><strong>Éviter les boucles inutiles :</strong></li>
+</ol>
+<pre><code class="language-kod">// ❌ Boucle lourde
+for i = 1 to 1000
+    if i == targetValue
+        doSomething()
+    end
+end
+
+// ✅ Accès direct
+if targetValue &lt;= 1000 &amp;&amp; targetValue &gt;= 1
+    doSomething()
+end
+</code></pre>
+<ol>
+<li><strong>Grouper les dessins :</strong></li>
+</ol>
+<pre><code class="language-kod">// ✅ Dessiner par type/couleur
+drawAllEnemies()      // Tous les ennemis ensemble
+drawAllBullets()      // Toutes les balles ensemble  
+drawAllPowerups()     // Tous les power-ups ensemble
+</code></pre>
+<hr />
+<h2 id="cas-durgence">🚨 Cas d'Urgence</h2>
+<h3 id="jeu-completement-casse">Jeu complètement cassé ?</h3>
+<ol>
+<li><strong>Rechargez la page</strong> (F5)</li>
+<li><strong>Copiez votre code</strong> dans un fichier texte</li>
+<li><strong>Commencez par un exemple simple</strong> qui fonctionne</li>
+<li><strong>Réintégrez votre code</strong> progressivement</li>
+</ol>
+<h3 id="editeur-ne-repond-plus">Éditeur ne répond plus ?</h3>
+<ol>
+<li><strong>Ctrl+A</strong> puis <strong>Ctrl+C</strong> (copier tout)</li>
+<li><strong>Rechargez la page</strong></li>
+<li><strong>Ctrl+V</strong> (coller le code)</li>
+<li><strong>Re-compilez</strong></li>
+</ol>
+<hr />
+<p><strong>Cette documentation de dépannage couvre 95% des problèmes rencontrés. Pour des problèmes spécifiques, analysez les messages d'erreur dans la console de debug !</strong></p>
+<p><strong>🔧 Bon dépannage et bon coding ! 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

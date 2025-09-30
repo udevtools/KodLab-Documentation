@@ -1,0 +1,1872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apprenez à coder en créant vos propres jeux vidéo avec KodLab, une console virtuelle simple et amusante.">
+      
+      
+      
+      
+        <link rel="prev" href="../guide-jeux/">
+      
+      
+        <link rel="next" href="../api-reference/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Architecture - KodLab - Console virtuelle pour apprendre à coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architecture-technique-kodlab" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-header__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KodLab - Console virtuelle pour apprendre à coder
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-utilisation/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide d'Utilisation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../langage-kod/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Langage Kod
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../guide-jeux/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Guide des Jeux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Architecture
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Référence API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exemples/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Exemples
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dépannage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="KodLab - Console virtuelle pour apprendre à coder" class="md-nav__button md-logo" aria-label="KodLab - Console virtuelle pour apprendre à coder" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KodLab - Console virtuelle pour apprendre à coder
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-utilisation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide d'Utilisation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../langage-kod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Langage Kod
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guide-jeux/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guide des Jeux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-des-matieres" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Table des Matières
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vue-densemble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vue d'Ensemble
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vue d&#39;Ensemble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-modulaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Modulaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technologies-utilisees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technologies Utilisées
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compilateur-kod" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compilateur Kod
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilateur Kod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#processus-de-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processus de Compilation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Processus de Compilation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-analyse-lexicale-tokenisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Analyse Lexicale (Tokenisation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-analyse-syntaxique-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Analyse Syntaxique (Parsing)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-compilation-des-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Compilation des Instructions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-generation-du-code-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Génération du Code JavaScript
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-erreurs-de-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Erreurs de Compilation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulateur-de-console" class="md-nav__link">
+    <span class="md-ellipsis">
+      Émulateur de Console
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Émulateur de Console">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-de-lemulateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture de l'Émulateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boucle-de-jeu-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boucle de Jeu Principal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestion-des-entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Entrées
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-du-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration du Canvas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface-utilisateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface Utilisateur
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface Utilisateur">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Structure HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-monaco-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Intégration Monaco Editor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flux-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flux de Données
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Flux de Données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cycle-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cycle de Développement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-entre-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication entre Modules
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestion-des-erreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestion des Erreurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gestion des Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-derreurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types d'Erreurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types d&#39;Erreurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-erreurs-de-compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Erreurs de Compilation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-erreurs-dexecution" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Erreurs d'Exécution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systeme-de-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Système de Logging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-et-optimisations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance et Optimisations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance et Optimisations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#optimisations-du-compilateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisations du Compilateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisations-de-lemulateur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisations de l'Émulateur
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimisations-de-rendu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimisations de Rendu
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metriques-de-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métriques de Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#points-dextension" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Points d'Extension
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Points d&#39;Extension">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajout-de-nouvelles-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajout de Nouvelles API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-de-nouveaux-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support de Nouveaux Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Référence API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exemples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exemples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dépannage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="architecture-technique-kodlab">🏗️ Architecture Technique - KodLab</h1>
+<p>Cette documentation détaille l'architecture interne de KodLab, le processus de compilation, et le fonctionnement de l'émulateur.</p>
+<hr />
+<h2 id="table-des-matieres">📋 Table des Matières</h2>
+<ol>
+<li><a href="#vue-densemble">Vue d'Ensemble</a></li>
+<li><a href="#compilateur-kod">Compilateur Kod</a></li>
+<li><a href="#émulateur-de-console">Émulateur de Console</a></li>
+<li><a href="#interface-utilisateur">Interface Utilisateur</a></li>
+<li><a href="#flux-de-données">Flux de Données</a></li>
+<li><a href="#gestion-des-erreurs">Gestion des Erreurs</a></li>
+<li><a href="#performance-et-optimisations">Performance et Optimisations</a></li>
+</ol>
+<hr />
+<h2 id="vue-densemble">Vue d'Ensemble</h2>
+<h3 id="architecture-modulaire">Architecture Modulaire</h3>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│                    index.html                       │
+│  Interface Utilisateur + Monaco Editor + Canvas    │
+└─────────────────┬───────────────────────────────────┘
+                  │
+┌─────────────────┴───────────────────────────────────┐
+│                   main.js                          │
+│        Orchestration et Communication               │
+└─────────┬─────────────────────────┬─────────────────┘
+          │                         │
+┌─────────┴─────────┐    ┌─────────┴─────────────────┐
+│  kodCompiler.js   │    │     kodEmulator.js        │
+│  .kod → JavaScript│    │   Exécution + Canvas      │
+└───────────────────┘    └───────────────────────────┘
+</code></pre>
+<h3 id="technologies-utilisees">Technologies Utilisées</h3>
+<ul>
+<li><strong>Frontend</strong> : HTML5, CSS3, JavaScript ES6+</li>
+<li><strong>Éditeur</strong> : Monaco Editor (VS Code)</li>
+<li><strong>Rendu</strong> : Canvas 2D Context</li>
+<li><strong>Parsing</strong> : Expressions régulières et AST simple</li>
+<li><strong>Compilation</strong> : Transpilation vers JavaScript ES6 Classes</li>
+</ul>
+<hr />
+<h2 id="compilateur-kod">Compilateur Kod</h2>
+<h3 id="processus-de-compilation">Processus de Compilation</h3>
+<h4 id="1-analyse-lexicale-tokenisation">1. Analyse Lexicale (Tokenisation)</h4>
+<pre><code class="language-javascript">// kodCompiler.js - Méthode compile()
+compile(kodCode) {
+    // 1. Nettoyage et préparation
+    const lines = kodCode
+        .split('\n')
+        .map(line =&gt; line.trim())
+        .filter(line =&gt; line.length &gt; 0 &amp;&amp; !line.startsWith('//'));
+
+    // 2. Séparation variables/fonctions
+    let variables = [];
+    let functions = [];
+    let i = 0;
+
+    // 3. Collecte des variables globales
+    while (i &lt; lines.length &amp;&amp; !lines[i].startsWith('function')) {
+        const varMatch = line.match(/^let\s+(\w+)\s*=\s*(.+)$/);
+        if (varMatch) {
+            variables.push({ name: varMatch[1], value: varMatch[2] });
+        }
+        i++;
+    }
+
+    // 4. Collecte et compilation des fonctions
+    // ...
+}
+</code></pre>
+<h4 id="2-analyse-syntaxique-parsing">2. Analyse Syntaxique (Parsing)</h4>
+<pre><code class="language-javascript">// Extraction des fonctions avec gestion des blocs
+while (i &lt; lines.length) {
+    if (lines[i].startsWith('function') || lines[i].match(/^(start|update)\s*\(/)) {
+        const funcName = this.extractFunctionName(lines[i]);
+        i++; // Passe la ligne de déclaration
+
+        let funcBody = [];
+        let braceLevel = 0;
+
+        // Parse du corps de fonction
+        while (i &lt; lines.length &amp;&amp; (lines[i] !== 'end' || braceLevel &gt; 0)) {
+            const line = lines[i];
+
+            if (line === 'end') {
+                braceLevel--;
+                funcBody.push('        }');
+            } else {
+                const compiled = this.compileStatement(line);
+                if (compiled.trim()) {
+                    funcBody.push('        ' + compiled);
+                    // Détection des structures de contrôle
+                    if (compiled.includes('if (') || 
+                        compiled.includes('for (') || 
+                        compiled.includes('while (')) {
+                        braceLevel++;
+                    }
+                }
+            }
+            i++;
+        }
+
+        functions.push({ name: funcName, body: funcBody });
+    }
+    i++;
+}
+</code></pre>
+<h4 id="3-compilation-des-instructions">3. Compilation des Instructions</h4>
+<pre><code class="language-javascript">compileStatement(line) {
+    // 1. Structures de contrôle
+    if (line.startsWith('if ')) {
+        return this.compileIf(line);
+    } else if (line.startsWith('else if ')) {
+        return this.compileElseIf(line);
+    } else if (line === 'else') {
+        return '} else {';
+    } else if (line.startsWith('for ')) {
+        return this.compileFor(line);
+    } else if (line.startsWith('while ')) {
+        return this.compileWhile(line);
+    }
+
+    // 2. Assignations
+    else if (line.match(/^\w+\s*=\s*.+$/)) {
+        return this.compileAssignment(line);
+    }
+
+    // 3. Appels de fonction
+    else {
+        return this.compileFunctionCall(line);
+    }
+}
+
+// Compilation spécifique des conditions
+compileIf(line) {
+    const condition = line.substring(3).trim(); // Enlève 'if '
+    const jsCondition = this.compileExpression(condition);
+    return `if (${jsCondition}) {`;
+}
+
+// Compilation des expressions
+compileExpression(expr) {
+    // Opérateurs logiques Kod → JavaScript
+    expr = expr.replace(/\s+and\s+/g, ' &amp;&amp; ');
+    expr = expr.replace(/\s+or\s+/g, ' || ');
+    expr = expr.replace(/\s+not\s+/g, ' !');
+
+    // Appels de fonctions API
+    expr = expr.replace(/isKeyPressed\s*\(/g, 'this.isKeyPressed(');
+
+    // Variables → propriétés de classe
+    expr = expr.replace(/\b(\w+)\b/g, (match) =&gt; {
+        if (this.isVariable(match)) {
+            return `this.${match}`;
+        }
+        return match;
+    });
+
+    return expr;
+}
+</code></pre>
+<h4 id="4-generation-du-code-javascript">4. Génération du Code JavaScript</h4>
+<pre><code class="language-javascript">generateGameClass(variables, functions) {
+    let code = `
+// Code généré automatiquement par le compilateur .kod
+class KodGame {
+    constructor(emulator) {
+        this.emulator = emulator;
+        this.ctx = emulator.ctx;
+        this.canvas = emulator.canvas;
+        this.keys = emulator.keys;
+
+        // Variables globales du jeu
+`;
+
+    // Injection des variables comme propriétés
+    for (let variable of variables) {
+        code += `        this.${variable.name} = ${variable.value};\n`;
+    }
+
+    code += `    }
+
+    // === API GRAPHIQUE ===
+    clearScreen(color = '#000000') {
+        this.ctx.fillStyle = color;
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+
+    drawRect(x, y, width, height, color) {
+        this.ctx.fillStyle = color;
+        this.ctx.fillRect(x, y, width, height);
+    }
+
+    // ... autres méthodes API ...
+
+    // === FONCTIONS UTILISATEUR ===
+`;
+
+    // Injection des fonctions compilées
+    for (let func of functions) {
+        code += `    ${func.name}() {\n`;
+        code += func.body.join('\n') + '\n';
+        code += `    }\n\n`;
+    }
+
+    code += `}`;
+
+    // Nettoyage des références doubles
+    code = code.replace(/this\.this\./g, 'this.');
+    code = code.replace(/\.{2,}/g, '.');
+
+    return code;
+}
+</code></pre>
+<h3 id="gestion-des-erreurs-de-compilation">Gestion des Erreurs de Compilation</h3>
+<pre><code class="language-javascript">compile(kodCode) {
+    try {
+        // Processus de compilation...
+        return { success: true, code: jsCode };
+    } catch (error) {
+        return { 
+            success: false, 
+            error: this.formatCompilerError(error)
+        };
+    }
+}
+
+formatCompilerError(error) {
+    // Localisation de l'erreur
+    const lineMatch = error.message.match(/line (\d+)/);
+    if (lineMatch) {
+        const lineNum = parseInt(lineMatch[1]);
+        return `Erreur ligne ${lineNum}: ${error.message}`;
+    }
+
+    // Erreurs de syntaxe courantes
+    if (error.message.includes('unexpected token')) {
+        return 'Erreur de syntaxe: vérifiez les parenthèses et la structure des blocs';
+    }
+
+    return `Erreur de compilation: ${error.message}`;
+}
+</code></pre>
+<hr />
+<h2 id="emulateur-de-console">Émulateur de Console</h2>
+<h3 id="architecture-de-lemulateur">Architecture de l'Émulateur</h3>
+<pre><code class="language-javascript">class KodEmulator {
+    constructor(canvasId) {
+        // Initialisation du canvas
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+
+        // État de l'émulateur
+        this.gameInstance = null;
+        this.isRunning = false;
+        this.animationId = null;
+
+        // Métriques de performance
+        this.lastFrameTime = 0;
+        this.fps = 0;
+        this.frameCount = 0;
+
+        // Gestion des entrées
+        this.keys = {};
+
+        this.setupEventListeners();
+        this.setupCanvas();
+    }
+}
+</code></pre>
+<h3 id="boucle-de-jeu-principal">Boucle de Jeu Principal</h3>
+<pre><code class="language-javascript">// Démarrage du jeu
+run() {
+    if (!this.gameInstance) {
+        return { success: false, error: 'Aucun jeu chargé' };
+    }
+
+    this.isRunning = true;
+    this.lastFrameTime = performance.now();
+
+    // Appel initial de start()
+    if (typeof this.gameInstance.start === 'function') {
+        this.gameInstance.start();
+    }
+
+    // Lancement de la boucle principale
+    this.gameLoop();
+
+    return { success: true, message: 'Jeu démarré' };
+}
+
+// Boucle de rendu 60 FPS
+gameLoop() {
+    if (!this.isRunning) return;
+
+    const currentTime = performance.now();
+    const deltaTime = currentTime - this.lastFrameTime;
+
+    // Calcul FPS
+    this.frameCount++;
+    if (currentTime - this.fpsUpdateTime &gt;= 1000) {
+        this.fps = Math.round(this.frameCount * 1000 / (currentTime - this.fpsUpdateTime));
+        this.frameCount = 0;
+        this.fpsUpdateTime = currentTime;
+    }
+
+    // Appel de la fonction update() du jeu
+    try {
+        if (typeof this.gameInstance.update === 'function') {
+            this.gameInstance.update();
+        }
+    } catch (error) {
+        this.handleRuntimeError(error);
+        return;
+    }
+
+    this.lastFrameTime = currentTime;
+
+    // Programmer la prochaine frame
+    this.animationId = requestAnimationFrame(() =&gt; this.gameLoop());
+}
+</code></pre>
+<h3 id="gestion-des-entrees">Gestion des Entrées</h3>
+<pre><code class="language-javascript">setupEventListeners() {
+    // Capture des événements clavier
+    document.addEventListener('keydown', (e) =&gt; {
+        this.handleKeyEvent(e, true);
+    });
+
+    document.addEventListener('keyup', (e) =&gt; {
+        this.handleKeyEvent(e, false);
+    });
+
+    // Prévention du scroll avec les flèches
+    document.addEventListener('keydown', (e) =&gt; {
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space'].includes(e.code)) {
+            e.preventDefault();
+        }
+    });
+}
+
+handleKeyEvent(event, isPressed) {
+    // Mapping des touches
+    const keyMap = {
+        'ArrowUp': 'up',
+        'ArrowDown': 'down', 
+        'ArrowLeft': 'left',
+        'ArrowRight': 'right',
+        'Space': 'space',
+        // Support WASD
+        'KeyW': 'up',
+        'KeyS': 'down',
+        'KeyA': 'left',
+        'KeyD': 'right'
+    };
+
+    const mappedKey = keyMap[event.code];
+    if (mappedKey) {
+        this.keys[mappedKey] = isPressed;
+    }
+}
+
+// API accessible depuis les jeux
+isKeyPressed(key) {
+    return Boolean(this.keys[key]);
+}
+</code></pre>
+<h3 id="configuration-du-canvas">Configuration du Canvas</h3>
+<pre><code class="language-javascript">setupCanvas() {
+    // Configuration pour le pixel art
+    this.ctx.imageSmoothingEnabled = false;
+    this.canvas.style.imageRendering = 'pixelated';
+
+    // Écran noir par défaut
+    this.clearScreen('#000000');
+
+    // Message d'accueil
+    this.ctx.fillStyle = '#666';
+    this.ctx.font = '20px Arial';
+    this.ctx.textAlign = 'center';
+    this.ctx.fillText('KodLab Ready', this.canvas.width / 2, this.canvas.height / 2);
+    this.ctx.fillText('Compilez et lancez votre code!', this.canvas.width / 2, this.canvas.height / 2 + 30);
+}
+
+// API de rendu optimisée
+clearScreen(color = '#000000') {
+    this.ctx.fillStyle = color;
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+}
+
+drawRect(x, y, width, height, color) {
+    this.ctx.fillStyle = color;
+    this.ctx.fillRect(x, y, width, height);
+}
+
+drawCircle(x, y, radius, color) {
+    this.ctx.fillStyle = color;
+    this.ctx.beginPath();
+    this.ctx.arc(x, y, radius, 0, 2 * Math.PI);
+    this.ctx.fill();
+}
+
+drawText(text, x, y, color) {
+    this.ctx.fillStyle = color;
+    this.ctx.font = '16px Arial';
+    this.ctx.textAlign = 'left';
+    this.ctx.fillText(text, x, y);
+}
+</code></pre>
+<hr />
+<h2 id="interface-utilisateur">Interface Utilisateur</h2>
+<h3 id="structure-html">Structure HTML</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;KodLab&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;!-- En-tête --&gt;
+        &lt;header class=&quot;header&quot;&gt;
+            &lt;h1&gt;🎮 KodLab&lt;/h1&gt;
+            &lt;div class=&quot;controls&quot;&gt;
+                &lt;select id=&quot;exampleSelect&quot;&gt;
+                    &lt;option value=&quot;&quot;&gt;Sélectionner un exemple&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+        &lt;/header&gt;
+
+        &lt;!-- Zone principale --&gt;
+        &lt;main class=&quot;main&quot;&gt;
+            &lt;!-- Éditeur de code --&gt;
+            &lt;section class=&quot;editor-section&quot;&gt;
+                &lt;div id=&quot;editor&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;editor-controls&quot;&gt;
+                    &lt;button id=&quot;compileBtn&quot;&gt;🔧 Compiler&lt;/button&gt;
+                    &lt;button id=&quot;runBtn&quot;&gt;▶️ Lancer&lt;/button&gt;
+                    &lt;button id=&quot;stopBtn&quot;&gt;⏹️ Stop&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/section&gt;
+
+            &lt;!-- Console de jeu --&gt;
+            &lt;section class=&quot;console-section&quot;&gt;
+                &lt;div class=&quot;console-header&quot;&gt;
+                    &lt;h3&gt;🎯 Console de Jeu&lt;/h3&gt;
+                    &lt;span id=&quot;fpsDisplay&quot;&gt;FPS: --&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;canvas id=&quot;gameCanvas&quot; width=&quot;400&quot; height=&quot;300&quot;&gt;&lt;/canvas&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+
+        &lt;!-- Console de debug --&gt;
+        &lt;footer class=&quot;console&quot;&gt;
+            &lt;div id=&quot;consoleOutput&quot;&gt;&lt;/div&gt;
+        &lt;/footer&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Scripts --&gt;
+    &lt;script src=&quot;https://unpkg.com/monaco-editor@0.44.0/min/vs/loader.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;kodCompiler.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;kodEmulator.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;main.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="integration-monaco-editor">Intégration Monaco Editor</h3>
+<pre><code class="language-javascript">// main.js - Configuration de l'éditeur
+require.config({ paths: { 'vs': 'https://unpkg.com/monaco-editor@0.44.0/min/vs' }});
+
+require(['vs/editor/editor.main'], function () {
+    // Configuration de la coloration syntaxique pour .kod
+    monaco.languages.register({ id: 'kod' });
+
+    monaco.languages.setMonarchTokensProvider('kod', {
+        tokenizer: {
+            root: [
+                // Mots-clés
+                [/\b(function|if|else|end|for|while|let|to|step)\b/, 'keyword'],
+
+                // Fonctions API
+                [/\b(clearScreen|drawRect|drawCircle|drawText|drawLine|isKeyPressed)\b/, 'function'],
+
+                // Nombres
+                [/\d+(\.\d+)?/, 'number'],
+
+                // Chaînes
+                [/&quot;[^&quot;]*&quot;/, 'string'],
+                [/'[^']*'/, 'string'],
+
+                // Commentaires
+                [/\/\/.*$/, 'comment'],
+
+                // Opérateurs
+                [/[+\-*\/=&lt;&gt;!&amp;|]/, 'operator'],
+            ]
+        }
+    });
+
+    // Création de l'éditeur
+    window.editor = monaco.editor.create(document.getElementById('editor'), {
+        value: getDefaultCode(),
+        language: 'kod',
+        theme: 'vs-dark',
+        automaticLayout: true,
+        minimap: { enabled: false },
+        scrollBeyondLastLine: false,
+        fontSize: 14,
+        tabSize: 4
+    });
+});
+
+function getDefaultCode() {
+    return `// Bienvenue dans KodLab !
+// Créez votre premier jeu en modifiant ce code
+
+let x = 200
+let y = 150
+
+function start()
+    clearScreen(&quot;#000033&quot;)
+end
+
+function update()
+    clearScreen(&quot;#000033&quot;)
+
+    // Contrôles
+    if isKeyPressed(&quot;left&quot;)
+        x = x - 3
+    end
+    if isKeyPressed(&quot;right&quot;)
+        x = x + 3
+    end
+
+    // Affichage
+    drawCircle(x, y, 20, &quot;#FF6600&quot;)
+    drawText(&quot;Utilisez les flèches!&quot;, 10, 20, &quot;#FFFFFF&quot;)
+end`;
+}
+</code></pre>
+<hr />
+<h2 id="flux-de-donnees">Flux de Données</h2>
+<h3 id="cycle-de-developpement">Cycle de Développement</h3>
+<pre><code>1. Écriture du Code (.kod)
+   ↓
+2. Compilation (kodCompiler.js)
+   ├─ Succès → Code JavaScript ES6
+   └─ Erreur → Message d'erreur
+   ↓
+3. Chargement dans l'Émulateur
+   ├─ eval() du code compilé
+   ├─ Création instance KodGame
+   └─ Liaison avec l'émulateur
+   ↓
+4. Exécution
+   ├─ Appel start() (une fois)
+   ├─ Boucle update() (60 FPS)
+   ├─ Gestion des entrées
+   └─ Rendu Canvas
+</code></pre>
+<h3 id="communication-entre-modules">Communication entre Modules</h3>
+<pre><code class="language-javascript">// main.js - Orchestration
+class KodLabApp {
+    constructor() {
+        this.compiler = new KodCompiler();
+        this.emulator = new KodEmulator('gameCanvas');
+        this.editor = null; // Monaco Editor
+
+        this.setupEventListeners();
+    }
+
+    compile() {
+        const code = this.editor.getValue();
+        const result = this.compiler.compile(code);
+
+        if (result.success) {
+            this.logMessage('✅ Compilation réussie !', 'success');
+            this.compiledCode = result.code;
+            return true;
+        } else {
+            this.logMessage('❌ ' + result.error, 'error');
+            return false;
+        }
+    }
+
+    run() {
+        if (!this.compiledCode) {
+            if (!this.compile()) return;
+        }
+
+        // Chargement dans l'émulateur
+        const loadResult = this.emulator.loadGame(this.compiledCode);
+        if (loadResult.success) {
+            // Démarrage du jeu
+            const runResult = this.emulator.run();
+            if (runResult.success) {
+                this.logMessage('▶️ ' + runResult.message, 'success');
+                this.updateUI('running');
+            } else {
+                this.logMessage('❌ ' + runResult.error, 'error');
+            }
+        } else {
+            this.logMessage('❌ ' + loadResult.error, 'error');
+        }
+    }
+
+    stop() {
+        this.emulator.stop();
+        this.logMessage('⏹️ Jeu arrêté', 'info');
+        this.updateUI('stopped');
+    }
+}
+</code></pre>
+<hr />
+<h2 id="gestion-des-erreurs">Gestion des Erreurs</h2>
+<h3 id="types-derreurs">Types d'Erreurs</h3>
+<h4 id="1-erreurs-de-compilation">1. Erreurs de Compilation</h4>
+<pre><code class="language-javascript">// Erreurs syntaxiques
+&quot;Erreur ligne 15: fonction 'drawCircl' inconnue&quot;
+&quot;Erreur ligne 8: 'end' attendu après 'if'&quot;
+&quot;Erreur ligne 22: variable 'speed' non déclarée&quot;
+
+// Erreurs de structure
+&quot;Fonction 'start' ou 'update' manquante&quot;
+&quot;Bloc non fermé: vérifiez vos 'end'&quot;
+</code></pre>
+<h4 id="2-erreurs-dexecution">2. Erreurs d'Exécution</h4>
+<pre><code class="language-javascript">// Erreurs JavaScript générées
+try {
+    this.gameInstance.update();
+} catch (error) {
+    this.handleRuntimeError(error);
+}
+
+handleRuntimeError(error) {
+    let message = 'Erreur d\'exécution: ';
+
+    if (error.name === 'ReferenceError') {
+        message += 'Variable ou fonction non définie';
+    } else if (error.name === 'TypeError') {
+        message += 'Type de données incorrect';
+    } else {
+        message += error.message;
+    }
+
+    this.logError(message);
+    this.stop();
+}
+</code></pre>
+<h3 id="systeme-de-logging">Système de Logging</h3>
+<pre><code class="language-javascript">class Logger {
+    static log(message, type = 'info') {
+        const console = document.getElementById('consoleOutput');
+        const timestamp = new Date().toLocaleTimeString();
+
+        const entry = document.createElement('div');
+        entry.className = `console-entry ${type}`;
+        entry.innerHTML = `&lt;span class=&quot;timestamp&quot;&gt;[${timestamp}]&lt;/span&gt; ${message}`;
+
+        console.appendChild(entry);
+        console.scrollTop = console.scrollHeight;
+
+        // Limite le nombre d'entrées
+        while (console.children.length &gt; 100) {
+            console.removeChild(console.firstChild);
+        }
+    }
+
+    static clear() {
+        document.getElementById('consoleOutput').innerHTML = '';
+    }
+}
+</code></pre>
+<hr />
+<h2 id="performance-et-optimisations">Performance et Optimisations</h2>
+<h3 id="optimisations-du-compilateur">Optimisations du Compilateur</h3>
+<pre><code class="language-javascript">// Cache des expressions compilées
+class KodCompiler {
+    constructor() {
+        this.expressionCache = new Map();
+        this.variableRegistry = new Set();
+    }
+
+    compileExpression(expr) {
+        // Utilisation du cache
+        if (this.expressionCache.has(expr)) {
+            return this.expressionCache.get(expr);
+        }
+
+        const compiled = this.doCompileExpression(expr);
+        this.expressionCache.set(expr, compiled);
+        return compiled;
+    }
+}
+</code></pre>
+<h3 id="optimisations-de-lemulateur">Optimisations de l'Émulateur</h3>
+<pre><code class="language-javascript">// Pool d'objets pour éviter le garbage collection
+class ObjectPool {
+    constructor(createFn, resetFn, initialSize = 10) {
+        this.createFn = createFn;
+        this.resetFn = resetFn;
+        this.available = [];
+        this.inUse = [];
+
+        // Pré-allocation
+        for (let i = 0; i &lt; initialSize; i++) {
+            this.available.push(this.createFn());
+        }
+    }
+
+    acquire() {
+        let obj = this.available.pop();
+        if (!obj) {
+            obj = this.createFn();
+        }
+        this.inUse.push(obj);
+        return obj;
+    }
+
+    release(obj) {
+        const index = this.inUse.indexOf(obj);
+        if (index &gt;= 0) {
+            this.inUse.splice(index, 1);
+            this.resetFn(obj);
+            this.available.push(obj);
+        }
+    }
+}
+</code></pre>
+<h3 id="optimisations-de-rendu">Optimisations de Rendu</h3>
+<pre><code class="language-javascript">// Batch rendering pour réduire les appels Canvas
+class BatchRenderer {
+    constructor(ctx) {
+        this.ctx = ctx;
+        this.batches = new Map();
+    }
+
+    addRect(x, y, w, h, color) {
+        if (!this.batches.has(color)) {
+            this.batches.set(color, []);
+        }
+        this.batches.get(color).push({type: 'rect', x, y, w, h});
+    }
+
+    flush() {
+        for (const [color, shapes] of this.batches) {
+            this.ctx.fillStyle = color;
+
+            for (const shape of shapes) {
+                if (shape.type === 'rect') {
+                    this.ctx.fillRect(shape.x, shape.y, shape.w, shape.h);
+                }
+            }
+        }
+
+        this.batches.clear();
+    }
+}
+</code></pre>
+<h3 id="metriques-de-performance">Métriques de Performance</h3>
+<pre><code class="language-javascript">class PerformanceMonitor {
+    constructor() {
+        this.frameTime = 0;
+        this.fps = 0;
+        this.memoryUsage = 0;
+        this.drawCalls = 0;
+    }
+
+    startFrame() {
+        this.frameStartTime = performance.now();
+        this.drawCalls = 0;
+    }
+
+    endFrame() {
+        this.frameTime = performance.now() - this.frameStartTime;
+        this.fps = Math.round(1000 / this.frameTime);
+
+        // Collecte mémoire (si disponible)
+        if (performance.memory) {
+            this.memoryUsage = Math.round(performance.memory.usedJSHeapSize / 1024 / 1024);
+        }
+    }
+
+    recordDrawCall() {
+        this.drawCalls++;
+    }
+
+    getReport() {
+        return {
+            fps: this.fps,
+            frameTime: this.frameTime.toFixed(2),
+            drawCalls: this.drawCalls,
+            memory: this.memoryUsage
+        };
+    }
+}
+</code></pre>
+<hr />
+<h2 id="points-dextension">🔧 Points d'Extension</h2>
+<h3 id="ajout-de-nouvelles-api">Ajout de Nouvelles API</h3>
+<pre><code class="language-javascript">// Dans generateGameClass()
+// Ajouter de nouvelles fonctions à la classe générée
+
+playSound(soundId) {
+    // Intégration Web Audio API
+    if (this.emulator.audioContext) {
+        // Lecture du son
+    }
+}
+
+saveToStorage(key, value) {
+    localStorage.setItem('KodLab_' + key, JSON.stringify(value));
+}
+
+loadFromStorage(key) {
+    const data = localStorage.getItem('KodLab_' + key);
+    return data ? JSON.parse(data) : null;
+}
+</code></pre>
+<h3 id="support-de-nouveaux-types">Support de Nouveaux Types</h3>
+<pre><code class="language-javascript">// Extension du système de types
+compileExpression(expr) {
+    // Support des arrays (simulation)
+    expr = expr.replace(/(\w+)\[(\d+)\]/g, 'this.$1_$2');
+
+    // Support des structures
+    expr = expr.replace(/(\w+)\.(\w+)/g, 'this.$1_$2');
+
+    return expr;
+}
+</code></pre>
+<hr />
+<p>Cette architecture modulaire permet une maintenance aisée et des extensions futures tout en gardant une complexité maîtrisée pour l'utilisateur final.</p>
+<p><strong>Pour aller plus loin, consultez l'<a href="../api-reference/">API de Référence</a> ! 🚀</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "search.highlight", "search.suggest", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
